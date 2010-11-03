@@ -224,10 +224,12 @@ $messages['ig'] = array(
 );
 
 /** Italian (Italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
 	'interlanguage-desc' => 'Raccoglie link interlingua da un altro sito wiki',
+	'interlanguage-pagelinksexplanation' => 'Pagine con link interlingua:',
 );
 
 /** Japanese (日本語)
