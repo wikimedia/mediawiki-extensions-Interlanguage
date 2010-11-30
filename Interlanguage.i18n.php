@@ -169,6 +169,7 @@ $messages['gv'] = array(
  */
 $messages['he'] = array(
 	'interlanguage-desc' => 'קבלת קישורים בינלשוניים מאתר ויקי אחר',
+	'interlanguage-pagelinksexplanation' => 'דפים עם קישורי שפה:',
 );
 
 /** Hiligaynon (Ilonggo)
