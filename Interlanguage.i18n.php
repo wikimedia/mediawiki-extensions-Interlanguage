@@ -125,10 +125,11 @@ $messages['eu'] = array(
 /** Finnish (Suomi)
  * @author Centerlink
  * @author Crt
+ * @author Nike
  */
 $messages['fi'] = array(
 	'interlanguage-desc' => 'Ottaa kieltenväliset linkit toisesta wikistä.',
-	'interlanguage-pagelinksexplanation' => 'Sivut, joilla on interlanguage-linkit:',
+	'interlanguage-pagelinksexplanation' => 'Sivut, joilla on kieltenvälisiä linkkejä:',
 );
 
 /** French (Français)
