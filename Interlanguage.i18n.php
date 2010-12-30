@@ -457,3 +457,11 @@ $messages['yi'] = array(
 	'interlanguage-desc' => 'נעמט אינטערשפראַך לינקען פון אַן אַנדער וויקי',
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Hydra
+ */
+$messages['zh-hans'] = array(
+	'interlanguage-desc' => '抓住从另一个维基语链接',
+	'interlanguage-pagelinksexplanation' => '中介语的链接的页：',
+);
+
