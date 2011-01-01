@@ -182,9 +182,11 @@ $messages['hil'] = array(
 
 /** Croatian (Hrvatski)
  * @author Mnalis
+ * @author SpeedyGonsales
  */
 $messages['hr'] = array(
 	'interlanguage-desc' => 'Dohvati međujezične veze sa drugog wikija',
+	'interlanguage-pagelinksexplanation' => 'Stranice s međuwiki poveznicama:',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
