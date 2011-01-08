@@ -165,12 +165,13 @@ $messages['gv'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'interlanguage-desc' => 'קבלת קישורים בינלשוניים מאתר ויקי אחר',
-	'interlanguage-pagelinksexplanation' => 'דפים עם קישורי שפה:',
+	'interlanguage-desc' => 'קבלת קישורים בין־לשוניים ("בינוויקי") מאתר ויקי אחר',
+	'interlanguage-pagelinksexplanation' => 'דפים עם קישורים בין־לשוניים:',
 );
 
 /** Hiligaynon (Ilonggo)
