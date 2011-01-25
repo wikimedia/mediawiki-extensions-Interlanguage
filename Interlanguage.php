@@ -148,7 +148,7 @@ class InterlanguageExtension {
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function pageLinks( $editPage ) {
-		global $wgInterlanguageExtensionInterwiki, $wgMessageCache, $wgTitle;
+		global $wgInterlanguageExtensionInterwiki, $wgTitle;
 
 		if( count( $this->pageLinks )) {
 			$pagelinks = $this->pageLinks;
@@ -166,7 +166,6 @@ class InterlanguageExtension {
 				}
 			}
 
-			$wgMessageCache->loadAllMessages(); //Why?
 			$ple = wfMsg( 'interlanguage-pagelinksexplanation' );
 
 			$res = <<<THEEND
