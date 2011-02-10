@@ -247,6 +247,13 @@ $messages['ja'] = array(
 	'interlanguage-pagelinksexplanation' => '言語間リンクのあるページ：',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
+ */
+$messages['km'] = array(
+	'interlanguage-desc' => 'ចាប់យកតំណភ្ជាប់អន្តរវិគីពីវីគីមួយផ្សេងទៀត',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
