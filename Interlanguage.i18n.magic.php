@@ -77,6 +77,16 @@ $magicWords['ru'] = array(
 	'interlanguage' => array( 0, 'межязык', 'interlanguage' ),
 );
 
+/** Serbian Cyrillic ekavian (Српски (ћирилица)>) */
+$messages['sr-ec'] = array(
+	'interlanguage'   => array( '0', 'међујезичје', 'interlanguage' ),
+);
+
+/** Serbian Latin ekavian (Srpski (latinica)) */
+$messages['sr-el'] = array(
+	'interlanguage'   => array( '0', 'меđujezičje', 'interlanguage' ),
+);
+
 /** Ukrainian (Українська) */
 $magicWords['uk'] = array(
 	'interlanguage' => array( 0, 'міжмова', 'межязык', 'interlanguage' ),

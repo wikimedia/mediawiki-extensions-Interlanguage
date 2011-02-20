@@ -1,24 +1,27 @@
 <?php
-# MediaWiki InterlanguageCentral extension v1.0
-#
-# Copyright © 2010 Nikola Smolenski <smolensk@eunet.rs>
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-#
-# For more information see
-# http://www.mediawiki.org/wiki/Extension:Interlanguage
+/**
+ * MediaWiki InterlanguageCentral extension v1.1
+ *
+ * Copyright © 2010 Nikola Smolenski <smolensk@eunet.rs>
+ * @version 1.1
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ *
+ * For more information,
+ * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
+ */
 
 $wgExtensionFunctions[]="wfInterlanguageCentralExtension";
 $wgJobClasses['purgeDependentWikis'] = 'InterlanguageCentralExtensionPurgeJob';
@@ -26,7 +29,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage Central',
 	'author'			=> 'Nikola Smolenski',
 	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.0',
+	'version'			=> '1.1',
 	'descriptionmsg'	=> 'interlanguagecentral-desc',
 );
 $wgExtensionMessagesFiles['Interlanguagecentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
@@ -44,16 +47,13 @@ class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
 	var $oldILL = array();
 	
-	function onArticleSave() {	
-		global $wgTitle;
-		$this->oldILL = $this->getILL($wgTitle);
+	function onArticleSave( $article ) {	
+		$this->oldILL = $this->getILL($article->mTitle);
 		return true;
 	}
 	
-	function onArticleSaveComplete() {
-		global $wgTitle;
-
-		$newILL = $this->getILL($wgTitle);
+	function onArticleSaveComplete( $article ) {
+		$newILL = $this->getILL($article->mTitle);
 
 		//Compare ILLs before and after the save; if nothing changed, there is no need to purge
 		if(
@@ -68,7 +68,7 @@ class InterlanguageCentralExtension {
 			))
 		) {
 			$ill = array_merge_recursive($this->oldILL, $newILL);
-			$job = new InterlanguageCentralExtensionPurgeJob( $wgTitle, array('ill' => $ill) );
+			$job = new InterlanguageCentralExtensionPurgeJob( $article->mTitle, array('ill' => $ill) );
 			$job->insert();
 		}
 	
@@ -80,14 +80,12 @@ class InterlanguageCentralExtension {
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select( 'langlinks', array( 'll_lang', 'll_title' ), array( 'll_from' => $title->mArticleID), __FUNCTION__);
 		$a = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach( $res as $row ) {
 			if(!isset($a[$row->ll_lang])) {
 				$a[$row->ll_lang] = array();
 			}
 			$a[$row->ll_lang][$row->ll_title] = true;
 		}
-		$dbr->freeResult( $res );
-	
 		return $a;
 	}
 	
@@ -117,10 +115,18 @@ class InterlanguageCentralExtensionPurgeJob extends Job {
 			//TODO: error handling
 			$baseURL = sprintf($wgInterlanguageCentralExtensionIndexUrl, $lang) .
 				"?action=purge&title=";
-			foreach($pages as $page => $dummy) {			
+			foreach($pages as $page => $dummy) {
 				$url = $baseURL . urlencode(strtr($page, ' ', '_'));
 				Http::post( $url );
 			}
+			//TODO: activate when becomes possible
+			/*
+		global $wgInterlanguageCentralExtensionApiUrl;
+			$url = sprintf($wgInterlanguageCentralExtensionApiUrl, $lang) .
+				"?action=purge&title=" .
+				implode( "|", array_walk( array_keys( $pages ), 'urlencode' ) );
+			Http::post( $url );
+			*/
 		}
  
 		return true;

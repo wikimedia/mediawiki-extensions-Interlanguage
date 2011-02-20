@@ -1,9 +1,9 @@
 <?php
 /**
- * MediaWiki Interlanguage extension v1.3
+ * MediaWiki Interlanguage extension v1.4
  *
  * Copyright © 2008-2010 Nikola Smolenski <smolensk@eunet.rs> and others
- * @version 1.3
+ * @version 1.4
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage',
 	'author'			=> 'Nikola Smolenski',
 	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.3',
+	'version'			=> '1.4',
 	'descriptionmsg'	=> 'interlanguage-desc',
 );
 $wgExtensionMessagesFiles['Interlanguage'] = dirname(__FILE__) . '/Interlanguage.i18n.php';
@@ -39,14 +39,15 @@ function wfInterlanguageExtension() {
 	global $wgParser, $wgHooks, $wgInterlanguageExtension;
 
 	$wgInterlanguageExtension = new InterlanguageExtension();
-	$wgHooks['LanguageGetMagic'][] = array( &$wgInterlanguageExtension, 'onLanguageGetMagic' );
-	$wgHooks['EditPage::showEditForm:fields'][] = array( &$wgInterlanguageExtension, 'pageLinks' );
+	$wgHooks['LanguageGetMagic'][] = $wgInterlanguageExtension;
+	$wgHooks['EditPage::showEditForm:fields'][] = array( $wgInterlanguageExtension, 'pageLinks' );
 	$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageExtension;
-	$wgParser->setFunctionHook( 'interlanguage', array( &$wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
+	$wgParser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
 }
 
 class InterlanguageExtension {
 	var $pageLinks = array();
+	var $foreignDbr = false;
 
 	function onLanguageGetMagic( &$magicWords, $langCode ) {
 		$magicWords['interlanguage'] = array(0, 'interlanguage');
@@ -60,30 +61,90 @@ class InterlanguageExtension {
 	 * @param	$param - parameter passed to {{interlanguage:}}.
 	 */
 	function interlanguage( &$parser, $param ) {
-		global $wgInterlanguageExtensionApiUrl, $wgInterlanguageExtensionSort,
-		$wgInterlanguageExtensionPrefix, $wgInterlanguageExtensionInterwiki,
-		$wgLanguageCode, $wgTitle, $wgMemc;
-	
-		if(isset($wgInterlanguageExtensionPrefix)) {
-			$param = "$wgInterlanguageExtensionPrefix$param";
-		}
+		global $wgInterlanguageExtensionApiUrl, $wgInterlanguageExtensionDB,
+		$wgInterlanguageExtensionSort, $wgInterlanguageExtensionInterwiki, $wgLanguageCode, $wgTitle, $wgMemc;
 
 		//This will later be used by pageLinks() and onArticleSave()
 		$this->pageLinks[$param] = true;
 
-		$url = $wgInterlanguageExtensionApiUrl . "?action=query&prop=langlinks&" .
-				"lllimit=500&format=php&redirects&titles=" . urlencode(strtr( $param, ' ', '_' ));
 		$key = wfMemcKey( 'Interlanguage', md5( $param ) );
 		$res = $wgMemc->get( $key );
 
 		if ( !$res ) {
-			// be sure to set $res back to bool false, we do a strict compare below
+			// Be sure to set $res back to bool false, we do a strict compare below
 			$res = false;
-			$a = Http::get( $url );
-			$a = @unserialize( $a );
+
+			if ( isset( $wgInterlanguageExtensionDB ) ) {
+				// Get the links from a foreign database
+				if( !$this->foreignDbr ) {
+					$foreignDbrClass = 'Database' . ucfirst( $wgInterlanguageExtensionDB['dbType'] );
+					$this->foreignDbr = new $foreignDbrClass(
+						$wgInterlanguageExtensionDB['dbServer'],
+						$wgInterlanguageExtensionDB['dbUser'],
+						$wgInterlanguageExtensionDB['dbPassword'],
+						$wgInterlanguageExtensionDB['dbName'],
+						$wgInterlanguageExtensionDB['dbFlags'],
+						$wgInterlanguageExtensionDB['tablePrefix']
+					);
+				}
+
+				$paramTitle = Title::newFromText( $param );
+				if( $paramTitle ) {
+					$dbKey = $paramTitle->mDbkeyform;
+					$namespace = $paramTitle->mNamespace;
+				} else {
+					//If the title is malformed, try at least this
+					$dbKey = strtr( $param, ' ', '_' );
+					$namespace = 0;
+				}
+
+				$a = array( 'query' => array( 'pages' => array() ) );
+
+				$res = $this->foreignDbr->select(
+					'page',
+					array( 'page_id', 'page_is_redirect' ),
+					array(
+						'page_title' => $dbKey,
+						'page_namespace' => $namespace
+					),
+					__FUNCTION__
+				);
+				$res = $res->fetchObject();
+
+				if( $res === false ) {
+					// There is no such article on the central wiki
+					$a['query']['pages'][-1] = array( 'missing' => "" );
+				} else {
+					if( $res->page_is_redirect ) {
+						$res = $this->foreignDbr->select(
+							array( 'redirect', 'page' ),
+							'page_id',
+							array(
+								'rd_title = page_title',
+								'rd_from' => $res->page_id
+							),
+							__FUNCTION__
+						);
+						$res = $res->fetchObject();
+					}
+
+					$a['query']['pages'][0] = array( 'langlinks' => $this->readLinksFromDB( $this->foreignDbr, $res->page_id ) );
+				}
+			} else {
+				// Get the links from an API
+				$title = $this->translateNamespace( $param );
+
+				$url = $wgInterlanguageExtensionApiUrl .
+					"?action=query&prop=langlinks&" .
+					"lllimit=500&format=php&redirects&titles=" .
+					urlencode( $title );
+				$a = Http::get( $url );
+				$a = @unserialize( $a );
+			}
+
 			if(isset($a['query']['pages']) && is_array($a['query']['pages'])) {
 				$a = array_shift($a['query']['pages']);
-	
+
 				if(isset($a['missing'])) {
 					// There is no such article on the central wiki
 					$linker = new Linker();
@@ -101,16 +162,11 @@ class InterlanguageExtension {
 				}
 			}
 		}
-	
+
 		if($res === false) {
 			// An API error has occured; preserve the links that are in the article
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'langlinks', array( 'll_lang', 'll_title' ), array( 'll_from' => $wgTitle->mArticleID), __FUNCTION__);
-			$a = array();
-			while ( $row = $dbr->fetchObject( $res ) ) {
-				$a[] = array( 'lang' => $row->ll_lang, '*' => $row->ll_title );
-			}
-			$dbr->freeResult( $res );
+			$a = $this->readLinksFromDB( $dbr, $wgTitle->mArticleID );
 			$res = true;
 		}
 	
@@ -159,7 +215,7 @@ class InterlanguageExtension {
 		if( count( $pagelinks ) ) {
 			$linker = new Linker(); $pagelinktexts = array();
 			foreach( $pagelinks as $page => $dummy ) {
-				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . strtr($page,'_',' ') );
+				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . strtr($this->translateNamespace( $page ),'_',' ') );
 				$link = $linker->link( $title );
 				if( strlen( $link ) ) {
 					$pagelinktexts[] = $link;
@@ -185,6 +241,23 @@ THEEND;
 		}
 
 		return true;
+	}
+
+	/**
+	 * Translate namespace from localized to the canonical form.
+	 *
+	 * @param	$param - Page title
+	 */
+	function translateNamespace( $param ) {
+		$paramTitle = Title::newFromText( $param );
+		if( $paramTitle ) {
+			$canonicalNamespaces = MWNamespace::getCanonicalNamespaces();
+			$title = $canonicalNamespaces[$paramTitle->mNamespace] . ":" . $paramTitle->mDbkeyform;
+		} else {
+			//If the title is malformed, try at least this
+			$title = strtr( $param, ' ', '_' );
+		}
+		return $title;
 	}
 
 	/**
@@ -221,11 +294,35 @@ THEEND;
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select( 'page_props', 'pp_value', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages' ), __FUNCTION__);
 		$pagelinks = array();
-		if ( $row = $dbr->fetchObject( $res ) ) {
+		$row = $res->fetchObject();
+		if ( $row ) {
 			$pagelinks = @unserialize( $row->pp_value );
 		}
-		$dbr->freeResult( $res );
+
 		return $pagelinks;
+	}
+
+	/**
+	 * Read interlanguage links from a database, and return them in the same format that API
+	 * uses.
+	 *
+	 * @param	$dbr - Database.
+	 * @param	$articleid - ID of the article whose links should be returned.
+	 * @returns	The array with the links. If there are no links, an empty array is returned.
+	 */
+	function readLinksFromDB( $dbr, $articleid ) {
+		$res = $dbr->select(
+			array( 'langlinks' ),
+			array( 'll_lang', 'll_title' ),
+			array( 'll_from' => $articleid ),
+			__FUNCTION__
+		);
+		$a = array();
+		foreach( $res as $row ) {
+			$a[] = array( 'lang' => $row->ll_lang, '*' => $row->ll_title );
+		}
+		$res->free();
+		return $a;
 	}
 
 	/**

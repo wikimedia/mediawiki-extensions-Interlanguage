@@ -401,6 +401,7 @@ $messages['sk'] = array(
  */
 $messages['sr-ec'] = array(
 	'interlanguage-desc' => 'Преузима међувики са другог пројекта',
+	'interlanguage-pagelinksexplanation' => 'Странице са међујезичким везама:',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬) */
