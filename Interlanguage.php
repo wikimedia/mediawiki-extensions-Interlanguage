@@ -23,7 +23,6 @@
  * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
-$wgExtensionFunctions[]="wfInterlanguageExtension";
 $wgExtensionCredits['parserhook'][] = array(
 	'path'			=> __FILE__,
 	'name'			=> 'Interlanguage',
@@ -34,15 +33,17 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 $wgExtensionMessagesFiles['Interlanguage'] = dirname(__FILE__) . '/Interlanguage.i18n.php';
 $wgExtensionMessagesFiles['InterlanguageMagic'] = dirname(__FILE__) . '/Interlanguage.i18n.magic.php';
+$wgHooks['ParserFirstCallInit'][] = 'wfInterlanguageExtension';
 
-function wfInterlanguageExtension() {
-	global $wgParser, $wgHooks, $wgInterlanguageExtension;
+function wfInterlanguageExtension( $parser ) {
+	global $wgHooks, $wgInterlanguageExtension;
 
 	$wgInterlanguageExtension = new InterlanguageExtension();
 	$wgHooks['LanguageGetMagic'][] = $wgInterlanguageExtension;
 	$wgHooks['EditPage::showEditForm:fields'][] = array( $wgInterlanguageExtension, 'pageLinks' );
 	$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageExtension;
-	$wgParser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
+	$parser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
+	return true;
 }
 
 class InterlanguageExtension {
@@ -65,7 +66,7 @@ class InterlanguageExtension {
 		$wgInterlanguageExtensionSort, $wgInterlanguageExtensionInterwiki, $wgLanguageCode, $wgTitle, $wgMemc;
 
 		//This will later be used by pageLinks() and onArticleSave()
-		$this->pageLinks[$param] = true;
+		$this->pageLinks[$parser->mTitle->mArticleID][$param] = true;
 
 		$key = wfMemcKey( 'Interlanguage', md5( $param ) );
 		$res = $wgMemc->get( $key );
@@ -206,10 +207,12 @@ class InterlanguageExtension {
 	function pageLinks( $editPage ) {
 		global $wgInterlanguageExtensionInterwiki, $wgTitle;
 
-		if( count( $this->pageLinks )) {
-			$pagelinks = $this->pageLinks;
+		$articleid = $wgTitle->mArticleID;
+
+		if( count( $this->pageLinks[$articleid] )) {
+			$pagelinks = $this->pageLinks[$articleid];
 		} else {
-			$pagelinks = $this->loadPageLinks( $wgTitle->mArticleID );
+			$pagelinks = $this->loadPageLinks( $articleid );
 		}
 
 		if( count( $pagelinks ) ) {
@@ -271,12 +274,12 @@ THEEND;
 		$pagelinks = $this->loadPageLinks( $articleid );
 		$dbr = wfGetDB( DB_MASTER );
 
-		if( count( array_diff_key( $pagelinks, $this->pageLinks ) ) || count( array_diff_key( $this->pageLinks, $pagelinks ) ) ) {
+		if( count( array_diff_key( $pagelinks, $this->pageLinks[$articleid] ) ) || count( array_diff_key( $this->pageLinks[$articleid], $pagelinks ) ) ) {
 			if( count( $pagelinks ) ) {
 				$dbr->delete( 'page_props', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages' ), __FUNCTION__);
 			}
-			if( count( $this->pageLinks ) ) {
-				$dbr->insert( 'page_props', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages', 'pp_value' => @serialize( $this->pageLinks ) ), __FUNCTION__);
+			if( count( $this->pageLinks[$articleid] ) ) {
+				$dbr->insert( 'page_props', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages', 'pp_value' => @serialize( $this->pageLinks[$articleid] ) ), __FUNCTION__);
 			}
 		}
 
