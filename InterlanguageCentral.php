@@ -23,7 +23,6 @@
  * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
-$wgExtensionFunctions[]="wfInterlanguageCentralExtension";
 $wgJobClasses['purgeDependentWikis'] = 'InterlanguageCentralExtensionPurgeJob';
 $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage Central',
@@ -33,15 +32,11 @@ $wgExtensionCredits['parserhook'][] = array(
 	'descriptionmsg'	=> 'interlanguagecentral-desc',
 );
 $wgExtensionMessagesFiles['Interlanguagecentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
- 
-function wfInterlanguageCentralExtension() {
-	global $wgHooks, $wgInterlanguageCentralExtension;
 
-	$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
-	$wgHooks['ArticleSave'][] = $wgInterlanguageCentralExtension;
-	$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageCentralExtension;
-	//TODO: ArticleDelete etc.
-}
+$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
+$wgHooks['ArticleSave'][] = $wgInterlanguageCentralExtension;
+$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageCentralExtension;
+//TODO: ArticleDelete etc.
 
 class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
