@@ -23,6 +23,12 @@
  * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
+$wgInterlanguageExtensionDB = false;
+$wgInterlanguageExtensionApiUrl = false;
+$wgInterlanguageExtensionInterwiki = "";
+$wgInterlanguageExtensionSort = 'none';
+$wgInterlanguageExtensionSortPrepend = false;
+
 $wgExtensionCredits['parserhook'][] = array(
 	'path'			=> __FILE__,
 	'name'			=> 'Interlanguage',
@@ -38,11 +44,12 @@ $wgHooks['ParserFirstCallInit'][] = 'wfInterlanguageExtension';
 function wfInterlanguageExtension( $parser ) {
 	global $wgHooks, $wgInterlanguageExtension;
 
-	$wgInterlanguageExtension = new InterlanguageExtension();
-	$wgHooks['LanguageGetMagic'][] = $wgInterlanguageExtension;
-	$wgHooks['EditPage::showEditForm:fields'][] = array( $wgInterlanguageExtension, 'pageLinks' );
-	$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageExtension;
-	$parser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
+	if( !isset($wgInterlanguageExtension) ) {
+		$wgInterlanguageExtension = new InterlanguageExtension();
+		$wgHooks['EditPage::showEditForm:fields'][] = array( $wgInterlanguageExtension, 'pageLinks' );
+		$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageExtension;
+		$parser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
+	}
 	return true;
 }
 
@@ -75,7 +82,7 @@ class InterlanguageExtension {
 			// Be sure to set $res back to bool false, we do a strict compare below
 			$res = false;
 
-			if ( isset( $wgInterlanguageExtensionDB ) ) {
+			if ( isset( $wgInterlanguageExtensionDB ) && $wgInterlanguageExtensionDB ) {
 				// Get the links from a foreign database
 				if( !$this->foreignDbr ) {
 					$foreignDbrClass = 'Database' . ucfirst( $wgInterlanguageExtensionDB['dbType'] );
@@ -131,7 +138,7 @@ class InterlanguageExtension {
 
 					$a['query']['pages'][0] = array( 'langlinks' => $this->readLinksFromDB( $this->foreignDbr, $res->page_id ) );
 				}
-			} else {
+			} else if ( isset( $wgInterlanguageExtensionApiUrl ) && $wgInterlanguageExtensionApiUrl ) {
 				// Get the links from an API
 				$title = $this->translateNamespace( $param );
 
