@@ -1,0 +1,66 @@
+<?php
+/**
+ * MediaWiki InterlanguageCentral extension v1.1
+ * InterlanguageCentralExtensionPurgeJob class
+ *
+ * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
+ * @version 1.1
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ *
+ * For more information,
+ * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
+ */
+
+//Based on http://www.mediawiki.org/wiki/Manual:Job_queue/For_developers
+class InterlanguageCentralExtensionPurgeJob extends Job {
+	public function __construct( $title, $params ) {
+		parent::__construct( 'purgeDependentWikis', $title, $params );
+	}
+ 
+	/**
+	 * Execute the job
+	 *
+	 * @return bool
+	 */
+	public function run() {
+		global $wgInterlanguageCentralExtensionIndexUrl;
+
+		//sleep() could be added here to reduce unnecessary use
+		$ill = $this->params['ill'];
+
+		foreach($ill as $lang => $pages) {
+			//TODO: error handling
+			$baseURL = sprintf($wgInterlanguageCentralExtensionIndexUrl, $lang) .
+				"?action=purge&title=";
+			foreach($pages as $page => $dummy) {
+				$url = $baseURL . urlencode(strtr($page, ' ', '_'));
+				Http::post( $url );
+			}
+			//TODO: activate when becomes possible
+			/*
+		global $wgInterlanguageCentralExtensionApiUrl;
+			$url = sprintf($wgInterlanguageCentralExtensionApiUrl, $lang) .
+				"?action=purge&title=" .
+				implode( "|", array_walk( array_keys( $pages ), 'urlencode' ) );
+			Http::post( $url );
+			*/
+		}
+ 
+		return true;
+	}
+
+	//TODO: custom insert with duplicate merging
+}
