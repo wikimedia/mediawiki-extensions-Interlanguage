@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaWiki InterlanguageCentral extension v1.1
+ * MediaWiki InterlanguageCentral extension v1.2
  * InterlanguageCentralExtension class
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
@@ -29,12 +29,12 @@ class InterlanguageCentralExtension {
 	var $oldILL = array();
 	
 	function onArticleSave( $article ) {	
-		$this->oldILL = $this->getILL($article->mTitle);
+		$this->oldILL = $this->getILL( DB_SLAVE, $article->mTitle);
 		return true;
 	}
 	
 	function onArticleSaveComplete( $article ) {
-		$newILL = $this->getILL($article->mTitle);
+		$newILL = $this->getILL( DB_MASTER, $article->mTitle);
 
 		//Compare ILLs before and after the save; if nothing changed, there is no need to purge
 		if(
@@ -57,8 +57,8 @@ class InterlanguageCentralExtension {
 	
 	}
 	
-	function getILL($title) {
-		$dbr = wfGetDB( DB_SLAVE );
+	function getILL( $db, $title ) {
+		$dbr = wfGetDB( $db );
 		$res = $dbr->select( 'langlinks', array( 'll_lang', 'll_title' ), array( 'll_from' => $title->mArticleID), __FUNCTION__);
 		$a = array();
 		foreach( $res as $row ) {

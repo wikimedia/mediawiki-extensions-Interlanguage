@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaWiki InterlanguageCentral extension v1.1
+ * MediaWiki InterlanguageCentral extension v1.2
  * InterlanguageCentralExtensionPurgeJob class
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
@@ -36,29 +36,23 @@ class InterlanguageCentralExtensionPurgeJob extends Job {
 	 * @return bool
 	 */
 	public function run() {
-		global $wgInterlanguageCentralExtensionIndexUrl;
-
 		//sleep() could be added here to reduce unnecessary use
 		$ill = $this->params['ill'];
 
 		foreach($ill as $lang => $pages) {
+			$iw = Interwiki::fetch( $lang );
+			if( !$iw ) continue;
+			$apiUrl = $iw->getAPI();
+			if( !$apiUrl ) continue;
+			$apiUrl .= '?' . wfArrayToCGI( array( 
+				'action'	=> 'purge',
+				'format'	=> 'json', //Smallest response
+				'titles'	=> implode( '|', array_keys( $pages ) )
+			) );
+			Http::post( $apiUrl );
 			//TODO: error handling
-			$baseURL = sprintf($wgInterlanguageCentralExtensionIndexUrl, $lang) .
-				"?action=purge&title=";
-			foreach($pages as $page => $dummy) {
-				$url = $baseURL . urlencode(strtr($page, ' ', '_'));
-				Http::post( $url );
-			}
-			//TODO: activate when becomes possible
-			/*
-		global $wgInterlanguageCentralExtensionApiUrl;
-			$url = sprintf($wgInterlanguageCentralExtensionApiUrl, $lang) .
-				"?action=purge&title=" .
-				implode( "|", array_walk( array_keys( $pages ), 'urlencode' ) );
-			Http::post( $url );
-			*/
 		}
- 
+
 		return true;
 	}
 

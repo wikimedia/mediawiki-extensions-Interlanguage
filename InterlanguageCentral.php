@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaWiki InterlanguageCentral extension v1.1
+ * MediaWiki InterlanguageCentral extension v1.2
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
  * @version 1.1
@@ -45,7 +45,9 @@ function wfInterlanguageCentralExtension() {
 		$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
 		$wgHooks['ArticleSave'][] = $wgInterlanguageCentralExtension;
 		$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageCentralExtension;
-		//TODO: ArticleDelete etc.
+		//TODO: ArticleDelete etc. OR
+		//TODO: After https://bugzilla.wikimedia.org/show_bug.cgi?id=24502
+		//$wgHooks['LinksUpdate'][] = $wgInterlanguageCentralExtension;
 	}
 	return true;
 }
