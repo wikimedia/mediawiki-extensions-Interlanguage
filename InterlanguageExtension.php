@@ -1,10 +1,10 @@
 <?php
 /**
- * MediaWiki Interlanguage extension v1.4
+ * MediaWiki Interlanguage extension
  * InterlanguageExtension class
  *
  * Copyright © 2008-2011 Nikola Smolenski <smolensk@eunet.rs> and others
- * @version 1.4
+ * @version 1.5
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -90,15 +90,7 @@ class InterlanguageExtension {
 		global $wgInterlanguageExtensionDB;
 
 		if( !$this->foreignDbr ) {
-			$foreignDbrClass = 'Database' . ucfirst( $wgInterlanguageExtensionDB['dbType'] );
-			$this->foreignDbr = new $foreignDbrClass(
-				$wgInterlanguageExtensionDB['dbServer'],
-				$wgInterlanguageExtensionDB['dbUser'],
-				$wgInterlanguageExtensionDB['dbPassword'],
-				$wgInterlanguageExtensionDB['dbName'],
-				$wgInterlanguageExtensionDB['dbFlags'],
-				$wgInterlanguageExtensionDB['tablePrefix']
-			);
+			$this->foreignDbr = wfGetDB( DB_SLAVE, array(), $wgInterlanguageExtensionDB );
 		}
 
 		list( $dbKey, $namespace ) = $this->getKeyNS( $param );
@@ -162,6 +154,8 @@ class InterlanguageExtension {
 	function processLinks( $a, $param ) {
 		global $wgInterlanguageExtensionInterwiki;
 
+		// Be sure to set $res to bool false in case of failure
+		$res = false;
 		if(isset($a['query']['pages']) && is_array($a['query']['pages'])) {
 			$a = array_shift($a['query']['pages']);
 			if( isset( $a['missing'] ) ) {
@@ -175,9 +169,6 @@ class InterlanguageExtension {
 					$a = $a['langlinks'];
 					if( is_array( $a ) ) {
 						$res = true;
-					} else {
-						// Be sure to set $res to bool false in case of failure
-						$res = false;
 					}
 				} else {
 					// There are no links in the central wiki article, so we display nothing
