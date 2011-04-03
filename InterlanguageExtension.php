@@ -185,26 +185,9 @@ class InterlanguageExtension {
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function pageLinks( $editPage ) {
-		global $wgInterlanguageExtensionInterwiki;
+		$pagelinktexts = $this->getPageLinkTexts( $editPage->mArticle->mTitle->mArticleID );
 
-		$articleid = $editPage->mArticle->mTitle->mArticleID;
-
-		if( isset( $this->pageLinks[$articleid] ) && count( $this->pageLinks[$articleid] ) ) {
-			$pagelinks = $this->pageLinks[$articleid];
-		} else {
-			$pagelinks = $this->loadPageLinks( $articleid );
-		}
-
-		if( count( $pagelinks ) ) {
-			$linker = new Linker(); $pagelinktexts = array();
-			foreach( $pagelinks as $page => $dummy ) {
-				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . strtr($this->translateNamespace( $page ), '_', ' ') );
-				$link = $linker->link( $title );
-				if( strlen( $link ) ) {
-					$pagelinktexts[] = $link;
-				}
-			}
-
+		if( count( $pagelinktexts ) ) {
 			$ple = wfMsg( 'interlanguage-pagelinksexplanation' );
 
 			$res = <<<THEEND
@@ -280,6 +263,60 @@ THEEND;
 		}
 
 		return true;
+	}
+
+	/**
+	 * Displays a list of links to pages on the central wiki at the end of the language box.
+	 *
+	 * @param	$editPage - standard EditPage object.
+	 */
+	function onSkinTemplateLanguageBoxEnd( $tpl ) {
+		$pagelinktexts = $this->getPageLinkTexts( $tpl->skin->mTitle->mArticleID, wfMsg( 'editsection' ) );
+
+		if( count( $pagelinktexts ) ) {
+			$res = "";
+			foreach($pagelinktexts as $link) {
+				$res .= "<li class=\"interwiki-interlanguage\">[$link]</li>\n";
+			}
+
+			echo $res;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Returns an array of link texts of pages on the central wiki which are linked to from a page
+	 * on this wiki by {{interlanguage:}} magic.
+	 *
+	 * @param	$articleid - ID of the article whose links should be returned.
+	 * @param	$text = false - The HTML contents of the <a> element. If set, it will be
+	 * passed to Linker::link(), if unset the link title will be used.
+	 * @returns	The array. If there are no pages linked, an empty array is returned.
+	 */
+	function getPageLinkTexts( $articleid, $text = false ) {
+		global $wgInterlanguageExtensionInterwiki;
+
+		if( isset( $this->pageLinks[$articleid] ) && count( $this->pageLinks[$articleid] ) ) {
+			$pagelinks = $this->pageLinks[$articleid];
+		} else {
+			$pagelinks = $this->loadPageLinks( $articleid );
+		}
+
+		$pagelinktexts = array();
+		if( count( $pagelinks ) ) {
+			$linker = new Linker();
+			foreach( $pagelinks as $page => $dummy ) {
+				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . strtr( $this->translateNamespace( $page ), '_', ' ') );
+				$link = $linker->link( $title, $text? $text: $page );
+				if( strlen( $link ) ) {
+					$pagelinktexts[] = $link;
+				}
+			}
+		}
+
+		return $pagelinktexts;
+
 	}
 
 	/**

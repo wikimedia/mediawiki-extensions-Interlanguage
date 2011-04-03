@@ -3,7 +3,7 @@
  * MediaWiki InterlanguageCentral extension v1.2
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
- * @version 1.1
+ * @version 1.2
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
