@@ -307,8 +307,8 @@ THEEND;
 		if( count( $pagelinks ) ) {
 			$linker = new Linker();
 			foreach( $pagelinks as $page => $dummy ) {
-				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . strtr( $this->translateNamespace( $page ), '_', ' ') );
-				$link = $linker->link( $title, $text? $text: $page );
+				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . $this->translateNamespace( $page ) );
+				$link = $linker->link( $title, $text? $text: $page, array(), array( 'action' => 'edit' ) );
 				if( strlen( $link ) ) {
 					$pagelinktexts[] = $link;
 				}
