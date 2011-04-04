@@ -49,7 +49,7 @@ function wfInterlanguageExtension( $parser ) {
 		$wgInterlanguageExtension = new InterlanguageExtension();
 		$wgHooks['EditPage::showEditForm:fields'][] = array( $wgInterlanguageExtension, 'pageLinks' );
 		$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageExtension;
-		$wgHooks['SkinTemplateLanguageBoxEnd'][] = $wgInterlanguageExtension;
+		$wgHooks['SkinTemplateOutputPageBeforeExec'][] = $wgInterlanguageExtension;
 		$parser->setFunctionHook( 'interlanguage', array( $wgInterlanguageExtension, 'interlanguage' ), SFH_NO_HASH );
 	}
 	return true;
