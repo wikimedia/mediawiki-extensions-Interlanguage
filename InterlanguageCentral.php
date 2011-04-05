@@ -43,11 +43,7 @@ function wfInterlanguageCentralExtension() {
 
 	if( !isset( $wgInterlanguageCentralExtension ) ) {
 		$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
-		$wgHooks['ArticleSave'][] = $wgInterlanguageCentralExtension;
-		$wgHooks['ArticleSaveComplete'][] = $wgInterlanguageCentralExtension;
-		//TODO: ArticleDelete etc. OR
-		//TODO: After https://bugzilla.wikimedia.org/show_bug.cgi?id=24502
-		//$wgHooks['LinksUpdate'][] = $wgInterlanguageCentralExtension;
+		$wgHooks['LinksUpdate'][] = $wgInterlanguageCentralExtension;
 	}
 	return true;
 }

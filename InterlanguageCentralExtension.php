@@ -27,36 +27,38 @@
 class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
 	var $oldILL = array();
-	
-	function onArticleSave( $article ) {	
-		$this->oldILL = $this->getILL( DB_SLAVE, $article->mTitle);
-		return true;
-	}
-	
-	function onArticleSaveComplete( $article ) {
-		$newILL = $this->getILL( DB_MASTER, $article->mTitle);
+
+	function onLinksUpdate( &$linksUpdate ) {
+		$oldILL = $this->getILL( DB_SLAVE, $linksUpdate->mTitle);
+		$newILL = $linksUpdate->mInterlangs;
+
+		//Convert $newILL to the same format as $oldILL
+		foreach($newILL as $k => $v) {
+			if(!is_array($v)) {
+				$newILL[$k] = array($v => true);
+			}
+		}
 
 		//Compare ILLs before and after the save; if nothing changed, there is no need to purge
 		if(
 			count(array_udiff_assoc(
-				$this->oldILL,
+				$oldILL,
 				$newILL,
 				"InterlanguageCentralExtension::arrayCompareKeys"
 			)) || count(array_udiff_assoc(
 				$newILL,
-				$this->oldILL,
+				$oldILL,
 				"InterlanguageCentralExtension::arrayCompareKeys"
 			))
 		) {
-			$ill = array_merge_recursive($this->oldILL, $newILL);
-			$job = new InterlanguageCentralExtensionPurgeJob( $article->mTitle, array('ill' => $ill) );
+			$ill = array_merge_recursive($oldILL, $newILL);
+			$job = new InterlanguageCentralExtensionPurgeJob( $linksUpdate->mTitle, array('ill' => $ill) );
 			$job->insert();
 		}
-	
+
 		return true;
-	
 	}
-	
+
 	function getILL( $db, $title ) {
 		$dbr = wfGetDB( $db );
 		$res = $dbr->select( 'langlinks', array( 'll_lang', 'll_title' ), array( 'll_from' => $title->mArticleID), __FUNCTION__);
