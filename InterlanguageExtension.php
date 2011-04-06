@@ -25,7 +25,6 @@
  */
 
 class InterlanguageExtension {
-	var $pageLinks = array();
 	var $foreignDbr = false;
 
 	function onLanguageGetMagic( &$magicWords, $langCode ) {
@@ -42,8 +41,7 @@ class InterlanguageExtension {
 	function interlanguage( &$parser, $param ) {
 		global $wgMemc;
 
-		//This will later be used by pageLinks() and onArticleSave()
-		$this->pageLinks[$parser->mTitle->mArticleID][$param] = true;
+		$this->addPageLink( $parser->getOutput(), $param );
 
 		$key = wfMemcKey( 'Interlanguage', md5( $param ) );
 		$res = $wgMemc->get( $key );
@@ -180,12 +178,45 @@ class InterlanguageExtension {
 	}
 
 	/**
+	 * Add a page to the list of page links. It will later be used by pageLinks().
+	 */
+	function addPageLink( &$parserOutput, $param ) {
+		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		if(!$ilp) $ilp = array(); else $ilp = @unserialize( $ilp );
+		if(!isset($ilp[$param])) {
+			$ilp[$param] = true;
+			$parserOutput->setProperty( 'interlanguage_pages', @serialize( $ilp ) );
+		}
+	}
+
+	/**
+	 * Get the list of page links.
+	 *
+	 * @param $parserOutput
+	 * @return Array of page links. Empty array if there are no links, literal false if links have not
+	 * been yet set.
+	 */
+	function getPageLinks( $parserOutput ) {
+		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		if($ilp !== false) $ilp = @unserialize( $ilp );
+		return $ilp;
+	}
+
+	/**
+	 * Copies interlanguage pages from ParserOutput to OutputPage.
+	 */
+	function onOutputPageParserOutput( &$out, $parserOutput ) {
+		$out->interlanguage_pages = $this->getPageLinks( $parserOutput );
+		return true;
+	}
+
+	/**
 	 * Displays a list of links to pages on the central wiki below the edit box.
 	 *
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function pageLinks( $editPage ) {
-		$pagelinktitles = $this->getPageLinkTitles( $editPage->mArticle->mTitle->mArticleID );
+		$pagelinktitles = $this->getPageLinkTitles( $editPage->mArticle->mTitle->mArticleID, $editPage->mParserOutput );
 
 		if( count( $pagelinktitles ) ) {
 			$linker = new Linker();
@@ -245,40 +276,17 @@ THEEND;
 	}
 
 	/**
-	 * Saves names of pages on the central wiki which are linked to from the saved page
-	 * by {{interlanguage:}} magic.
-	 *
-	 * @param	$article - standard Article object.
-	 */
-	function onArticleSaveComplete( &$article ) {
-		$articleid = $article->mTitle->mArticleID;
-		$pagelinks = $this->loadPageLinks( $articleid );
-		$dbr = wfGetDB( DB_MASTER );
-
-		if( count( array_diff_key( $pagelinks, $this->pageLinks[$articleid] ) ) || count( array_diff_key( $this->pageLinks[$articleid], $pagelinks ) ) ) {
-			if( count( $pagelinks ) ) {
-				$dbr->delete( 'page_props', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages' ), __FUNCTION__);
-			}
-			if( count( $this->pageLinks[$articleid] ) ) {
-				$dbr->insert( 'page_props', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages', 'pp_value' => @serialize( $this->pageLinks[$articleid] ) ), __FUNCTION__);
-			}
-		}
-
-		return true;
-	}
-
-	/**
 	 * Displays a list of links to pages on the central wiki at the end of the language box.
 	 *
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function onSkinTemplateOutputPageBeforeExec( &$skin, &$template ) {
-		$pagelinktitles = $this->getPageLinkTitles( $skin->mTitle->mArticleID, wfMsg( 'editsection' ) );
+		$pagelinktitles = $this->getPageLinkTitles( $skin->mTitle->mArticleID );
 
 		foreach( $pagelinktitles as $title ) {
 			$template->data['language_urls'][] = array(
 				'href' => $title->getFullURL( array( 'action' => 'edit' ) ),
-				'text' => "edit",
+				'text' => wfMsg( 'editsection' ),
 				'title' => $title->getText(),
 				'class' => "interwiki-interlanguage",
 				'before' => "[",
@@ -293,15 +301,25 @@ THEEND;
 	 * Returns an array of Titles of pages on the central wiki which are linked to from a page
 	 * on this wiki by {{interlanguage:}} magic.
 	 *
-	 * @param	$articleid - ID of the article whose links should be returned.
+	* @param		$articleid ID of the article whose links should be returned.
+	 * @param	$parserOutput A ParserOutput object.
 	 * @returns	The array. If there are no pages linked, an empty array is returned.
 	 */
-	function getPageLinkTitles( $articleid ) {
+	function getPageLinkTitles( $articleid = null, $parserOutput = null ) {
 		global $wgInterlanguageExtensionInterwiki;
 
-		if( isset( $this->pageLinks[$articleid] ) && count( $this->pageLinks[$articleid] ) ) {
-			$pagelinks = $this->pageLinks[$articleid];
+		if( $parserOutput === null) {
+			global $wgOut;
+			if( isset( $wgOut->interlanguage_pages ) ) {
+				$pagelinks = $wgOut->interlanguage_pages;
+			} else {
+				$pagelinks = false;
+			}
 		} else {
+			$pagelinks = $this->getPageLinks( $parserOutput );
+		}
+
+		if( ( $pagelinks === false || $pagelinks === null ) && $articleid ) {
 			$pagelinks = $this->loadPageLinks( $articleid );
 		}
 
