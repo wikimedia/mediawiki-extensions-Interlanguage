@@ -206,7 +206,8 @@ class InterlanguageExtension {
 	 * Copies interlanguage pages from ParserOutput to OutputPage.
 	 */
 	function onOutputPageParserOutput( &$out, $parserOutput ) {
-		$out->interlanguage_pages = $this->getPageLinks( $parserOutput );
+		$pagelinks = $this->getPageLinks( $parserOutput );
+		if( $pagelinks ) $out->interlanguage_pages = $pagelinks;
 		return true;
 	}
 
@@ -216,7 +217,15 @@ class InterlanguageExtension {
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function pageLinks( $editPage ) {
-		$pagelinktitles = $this->getPageLinkTitles( $editPage->mArticle->mTitle->mArticleID, $editPage->mParserOutput );
+		if( isset( $editPage->mParserOutput ) ) {
+			$pagelinks = $this->getPageLinks( $editPage->mParserOutput );
+			if(!$pagelinks) $pagelinks = array();
+		} else {
+			// If there is no ParserOutput, it means the article was not parsed, and we should
+			// load links from the DB.
+			$pagelinks = $this->loadPageLinks( $editPage->mArticle->mTitle->mArticleID );
+		}
+		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
 
 		if( count( $pagelinktitles ) ) {
 			$linker = new Linker();
@@ -281,7 +290,9 @@ THEEND;
 	 * @param	$editPage - standard EditPage object.
 	 */
 	function onSkinTemplateOutputPageBeforeExec( &$skin, &$template ) {
-		$pagelinktitles = $this->getPageLinkTitles( $skin->mTitle->mArticleID );
+		global $wgOut;
+		$pagelinks = isset( $wgOut->interlanguage_pages )? $wgOut->interlanguage_pages: array();
+		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
 
 		foreach( $pagelinktitles as $title ) {
 			$template->data['language_urls'][] = array(
@@ -298,33 +309,16 @@ THEEND;
 	}
 
 	/**
-	 * Returns an array of Titles of pages on the central wiki which are linked to from a page
-	 * on this wiki by {{interlanguage:}} magic.
+	 * Make an array of Titles from the array of links.
 	 *
-	* @param		$articleid ID of the article whose links should be returned.
-	 * @param	$parserOutput A ParserOutput object.
-	 * @returns	The array. If there are no pages linked, an empty array is returned.
+	* @param		$pagelinks Array of page links.
+	 * @returns	Array of Title objects.  If there are no page links, an empty array is returned.
 	 */
-	function getPageLinkTitles( $articleid = null, $parserOutput = null ) {
+	function makePageLinkTitles( $pagelinks ) {
 		global $wgInterlanguageExtensionInterwiki;
 
-		if( $parserOutput === null) {
-			global $wgOut;
-			if( isset( $wgOut->interlanguage_pages ) ) {
-				$pagelinks = $wgOut->interlanguage_pages;
-			} else {
-				$pagelinks = false;
-			}
-		} else {
-			$pagelinks = $this->getPageLinks( $parserOutput );
-		}
-
-		if( ( $pagelinks === false || $pagelinks === null ) && $articleid ) {
-			$pagelinks = $this->loadPageLinks( $articleid );
-		}
-
 		$pagelinktitles = array();
-		if( count( $pagelinks ) ) {
+		if( is_array( $pagelinks ) ) {
 			foreach( $pagelinks as $page => $dummy ) {
 				$title = Title::newFromText( $wgInterlanguageExtensionInterwiki . $this->translateNamespace( $page ) );
 				if( $title ) {
