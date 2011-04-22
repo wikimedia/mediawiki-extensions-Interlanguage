@@ -18,9 +18,11 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Fryed-peach
+ * @author Purodha
  */
 $messages['qqq'] = array(
 	'interlanguage-desc' => '{{desc}}',
+	'interlanguage-editlinks' => 'This is a link to a page where interlanguage links of the current page can be edited.',
 );
 
 /** Afrikaans (Afrikaans)
@@ -212,6 +214,7 @@ $messages['hu'] = array(
 $messages['ia'] = array(
 	'interlanguage-desc' => 'Collige ligamines interlingual ex un altere wiki',
 	'interlanguage-pagelinksexplanation' => 'Paginas con ligamines de linguas:',
+	'interlanguage-editlinks' => 'Modificar ligamines',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -261,6 +264,7 @@ $messages['km'] = array(
 $messages['ksh'] = array(
 	'interlanguage-desc' => 'Hollt de Lenks zwesche de Shprooche vun enem ander Wiki.',
 	'interlanguage-pagelinksexplanation' => 'Atikele met Lenks op ander Shprooche',
+	'interlanguage-editlinks' => 'De Shproochelenks ändere',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -284,6 +288,7 @@ $messages['lv'] = array(
 $messages['mk'] = array(
 	'interlanguage-desc' => 'Презема меѓујазични врски од друго вики',
 	'interlanguage-pagelinksexplanation' => 'Страници со меѓујазични врски:',
+	'interlanguage-editlinks' => 'Уреди врски',
 );
 
 /** Malayalam (മലയാളം)
@@ -338,6 +343,7 @@ $messages['pl'] = array(
 $messages['pms'] = array(
 	'interlanguage-desc' => 'A cheuj anliure antërlenga da àutre wiki',
 	'interlanguage-pagelinksexplanation' => "Pàgine con dj'anliure antra lenghe:",
+	'interlanguage-editlinks' => 'Modifiché Anliure',
 );
 
 /** Pashto (پښتو)
@@ -438,6 +444,7 @@ $messages['te'] = array(
 $messages['tl'] = array(
 	'interlanguage-desc' => 'Kumukuha ng mga kawing na pang-interwika mula sa ibang wiki',
 	'interlanguage-pagelinksexplanation' => 'Mga pahinang may mga kawing na pang-ugnayan ng wika:',
+	'interlanguage-editlinks' => 'Baguhin ang mga Kawing',
 );
 
 /** Turkish (Türkçe)
