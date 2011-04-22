@@ -41,6 +41,11 @@ $wgExtensionMessagesFiles['Interlanguage'] = dirname(__FILE__) . '/Interlanguage
 $wgExtensionMessagesFiles['InterlanguageMagic'] = dirname(__FILE__) . '/Interlanguage.i18n.magic.php';
 $wgAutoloadClasses['InterlanguageExtension'] = dirname(__FILE__) . '/InterlanguageExtension.php';
 $wgHooks['ParserFirstCallInit'][] = 'wfInterlanguageExtension';
+$wgResourceModules['ext.Interlanguage'] = array(
+	'styles' => 'modules/interlanguage.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'Interlanguage',
+);
 
 function wfInterlanguageExtension( $parser ) {
 	global $wgHooks, $wgInterlanguageExtension;

@@ -42,6 +42,7 @@ class InterlanguageExtension {
 		global $wgMemc;
 
 		$this->addPageLink( $parser->getOutput(), $param );
+		$parser->getOutput()->addModules( 'ext.Interlanguage' );
 
 		$key = wfMemcKey( 'Interlanguage', md5( $param ) );
 		$res = $wgMemc->get( $key );
@@ -297,11 +298,9 @@ THEEND;
 		foreach( $pagelinktitles as $title ) {
 			$template->data['language_urls'][] = array(
 				'href' => $title->getFullURL( array( 'action' => 'edit' ) ),
-				'text' => wfMsg( 'editsection' ),
+				'text' => wfMsg( 'interlanguage-editlinks' ),
 				'title' => $title->getText(),
 				'class' => "interwiki-interlanguage",
-				'before' => "[",
-				'after' => "]",
 			);
 		}
 

@@ -1,0 +1,22 @@
+.interwiki-interlanguage {
+	list-style-type: none;
+	list-style-image: none;
+	text-align: right;
+	padding-right: .5em !important; 
+}
+
+.interwiki-interlanguage > a {
+	padding-left: 11px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.interwiki-interlanguage > a:link, .interwiki-interlanguage > a:visited {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==');
+	color: #797979 !important;
+}
+
+.interwiki-interlanguage > a:hover {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==");
+	color: #0645AD !important;
+}

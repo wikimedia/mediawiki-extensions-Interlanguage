@@ -13,6 +13,7 @@ $messages = array();
 $messages['en'] = array(
 	'interlanguage-desc' => 'Grabs interlanguage links from another wiki',
 	'interlanguage-pagelinksexplanation' => 'Pages with interlanguage links:',
+	'interlanguage-editlinks' => 'Edit Links',
 );
 
 /** Message documentation (Message documentation)
@@ -400,8 +401,9 @@ $messages['sk'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
-	'interlanguage-desc' => 'Преузима међувики са другог пројекта',
+	'interlanguage-desc' => 'Преузима међујезичке везе са другог пројекта',
 	'interlanguage-pagelinksexplanation' => 'Странице са међујезичким везама:',
+	'interlanguage-editlinks' => 'Уреди везе',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬) */
