@@ -18,11 +18,13 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Fryed-peach
+ * @author Nikola Smolenski
  * @author Purodha
  */
 $messages['qqq'] = array(
 	'interlanguage-desc' => '{{desc}}',
-	'interlanguage-editlinks' => 'This is a link to a page where interlanguage links of the current page can be edited.',
+	'interlanguage-editlinks' => '[[Image:InterlanguageLinks-Sidebar-Monobook.png|right]]
+This is a link to a page where interlanguage links of the current page can be edited. See the image on the right for how it should look like.',
 );
 
 /** Afrikaans (Afrikaans)
@@ -87,11 +89,13 @@ $messages['ca'] = array(
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author Marcel083
  * @author PasO
  */
 $messages['de'] = array(
 	'interlanguage-desc' => 'Ermöglicht den Abruf von Links zu verbundenen Wikis in anderen Sprachen',
 	'interlanguage-pagelinksexplanation' => 'Seiten mit Links zu verbundenen Wikis in anderen Sprachen',
+	'interlanguage-editlinks' => 'Links bearbeiten',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -175,6 +179,7 @@ $messages['gv'] = array(
 $messages['he'] = array(
 	'interlanguage-desc' => 'קבלת קישורים בין־לשוניים ("בינוויקי") מאתר ויקי אחר',
 	'interlanguage-pagelinksexplanation' => 'דפים עם קישורים בין־לשוניים:',
+	'interlanguage-editlinks' => 'עריכת קישורים',
 );
 
 /** Hiligaynon (Ilonggo)
@@ -256,6 +261,8 @@ $messages['ja'] = array(
  */
 $messages['km'] = array(
 	'interlanguage-desc' => 'ចាប់យកតំណភ្ជាប់អន្តរវិគីពីវីគីមួយផ្សេងទៀត',
+	'interlanguage-pagelinksexplanation' => 'ទំព័រដែលមានតំណភ្ជាប់អន្តរភាសា៖',
+	'interlanguage-editlinks' => 'កែប្រែតំណភ្ជាប់',
 );
 
 /** Colognian (Ripoarisch)
@@ -304,6 +311,7 @@ $messages['ml'] = array(
 $messages['nl'] = array(
 	'interlanguage-desc' => 'Haalt intertaalverwijzingen uit een andere wiki',
 	'interlanguage-pagelinksexplanation' => "Pagina's met taalverwijzingen:",
+	'interlanguage-editlinks' => 'Verwijzingen bewerken',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -360,6 +368,7 @@ $messages['ps'] = array(
 $messages['pt'] = array(
 	'interlanguage-desc' => 'Extrai os links interlínguas de outra wiki',
 	'interlanguage-pagelinksexplanation' => 'Páginas com links interlínguas:',
+	'interlanguage-editlinks' => 'Editar Links',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
