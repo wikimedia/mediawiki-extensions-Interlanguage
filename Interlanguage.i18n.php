@@ -58,10 +58,12 @@ $messages['be'] = array(
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Jim-by
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
 	'interlanguage-desc' => 'Захоплівае міжмоўныя спасылкі зь іншай вікі',
 	'interlanguage-pagelinksexplanation' => 'Старонкі са спасылкамі на іншыя моўныя вэрсіі:',
+	'interlanguage-editlinks' => 'Рэдагаваць спасылкі',
 );
 
 /** Breton (Brezhoneg)
@@ -396,6 +398,7 @@ $messages['roa-tara'] = array(
 $messages['ru'] = array(
 	'interlanguage-desc' => 'Захватывает межъязыковые ссылки из другой вики',
 	'interlanguage-pagelinksexplanation' => 'Страницы с межъязыковыми ссылками:',
+	'interlanguage-editlinks' => 'Править ссылки',
 );
 
 /** Yakut (Саха тыла)
