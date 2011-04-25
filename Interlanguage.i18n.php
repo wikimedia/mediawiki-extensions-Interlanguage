@@ -142,12 +142,14 @@ $messages['fi'] = array(
 );
 
 /** French (Français)
+ * @author IAlex
  * @author Peter17
  * @author Verdy p
  */
 $messages['fr'] = array(
 	'interlanguage-desc' => 'Permet de collecter les liens interlangues d’un autre wiki',
 	'interlanguage-pagelinksexplanation' => 'Pages avec des liens inter-langues :',
+	'interlanguage-editlinks' => 'Modifier les liens',
 );
 
 /** Galician (Galego)
@@ -282,6 +284,7 @@ $messages['ksh'] = array(
 $messages['lb'] = array(
 	'interlanguage-desc' => "Erlaabt et d'Linke tëschent Sproochen vun enger anerer Wiki z'iwwerhuelen",
 	'interlanguage-pagelinksexplanation' => 'Säite mat Linke mat anere Sproochen:',
+	'interlanguage-editlinks' => 'Linken änneren',
 );
 
 /** Latvian (Latviešu)
@@ -329,6 +332,7 @@ $messages['nn'] = array(
 $messages['no'] = array(
 	'interlanguage-desc' => 'Henter språklenker fra andre wikier',
 	'interlanguage-pagelinksexplanation' => 'Sider med språklenker:',
+	'interlanguage-editlinks' => 'Rediger lenker',
 );
 
 /** Occitan (Occitan)
