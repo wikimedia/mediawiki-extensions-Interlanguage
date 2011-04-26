@@ -72,6 +72,7 @@ $messages['be-tarask'] = array(
 $messages['br'] = array(
 	'interlanguage-desc' => 'Talvezout a ra da zastum liammoù etreyezhoù adalek ur wiki all',
 	'interlanguage-pagelinksexplanation' => 'Pejannoù enno liammoù etreezhoù :',
+	'interlanguage-editlinks' => 'Kemmañ al liammoù',
 );
 
 /** Bosnian (Bosanski)
