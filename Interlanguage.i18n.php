@@ -230,10 +230,12 @@ $messages['ia'] = array(
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
  * @author Farras
+ * @author IvanLanin
  */
 $messages['id'] = array(
 	'interlanguage-desc' => 'Ambil pranala antarbahasa dari wiki lain',
 	'interlanguage-pagelinksexplanation' => 'Halaman dengan pranala antarbahasa:',
+	'interlanguage-editlinks' => 'Sunting pranala',
 );
 
 /** Igbo (Igbo)
@@ -418,6 +420,15 @@ $messages['sah'] = array(
  */
 $messages['sk'] = array(
 	'interlanguage-desc' => 'Získa medzijazykové odkazy z inej wiki',
+);
+
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'interlanguage-desc' => 'Zagrabi medjezikovne povezave z drugega wikija',
+	'interlanguage-pagelinksexplanation' => 'Strani z medjezikovnimi povezavami:',
+	'interlanguage-editlinks' => 'Uredi povezave',
 );
 
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
