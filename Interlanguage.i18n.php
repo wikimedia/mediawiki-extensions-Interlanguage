@@ -159,6 +159,7 @@ $messages['fr'] = array(
 $messages['gl'] = array(
 	'interlanguage-desc' => 'Permite a obtención de ligazóns interlingüísticas desde outro wiki',
 	'interlanguage-pagelinksexplanation' => 'Páxinas con ligazóns interlingüísticas:',
+	'interlanguage-editlinks' => 'Editar as ligazóns',
 );
 
 /** Swiss German (Alemannisch)
