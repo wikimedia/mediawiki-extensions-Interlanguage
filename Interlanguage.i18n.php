@@ -66,6 +66,13 @@ $messages['be-tarask'] = array(
 	'interlanguage-editlinks' => 'Рэдагаваць спасылкі',
 );
 
+/** Bengali (বাংলা)
+ * @author Wikitanvir
+ */
+$messages['bn'] = array(
+	'interlanguage-editlinks' => 'সংযোগ সম্পাদনা',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */
