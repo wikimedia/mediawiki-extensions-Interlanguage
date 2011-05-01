@@ -497,6 +497,7 @@ $messages['tr'] = array(
 $messages['uk'] = array(
 	'interlanguage-desc' => 'Імпортує міжмовні посилання з іншої вікі',
 	'interlanguage-pagelinksexplanation' => 'Сторінки з посиланнями на іншомовні версії:',
+	'interlanguage-editlinks' => 'Редагувати інтервікі',
 );
 
 /** Vietnamese (Tiếng Việt)
