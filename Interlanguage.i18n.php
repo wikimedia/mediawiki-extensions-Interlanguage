@@ -260,6 +260,7 @@ $messages['ig'] = array(
 $messages['it'] = array(
 	'interlanguage-desc' => 'Raccoglie link interlingua da un altro sito wiki',
 	'interlanguage-pagelinksexplanation' => 'Pagine con link interlingua:',
+	'interlanguage-editlinks' => 'Modifica collegamenti',
 );
 
 /** Japanese (日本語)
