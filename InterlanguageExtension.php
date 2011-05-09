@@ -44,13 +44,8 @@ class InterlanguageExtension {
 		$this->addPageLink( $parser->getOutput(), $param );
 		$parser->getOutput()->addModules( 'ext.Interlanguage' );
 
-		$key = wfMemcKey( 'Interlanguage', md5( $param ) );
-		$res = $wgMemc->get( $key );
-
-		if ( !$res ) {
-			$a = $this->getLinks( $param );
-			list($res, $a) = $this->processLinks( $a, $param );
-		}
+		$a = $this->getLinks( $param );
+		list($res, $a) = $this->processLinks( $a, $param );
 
 		if($res === false) {
 			list( $res, $a ) = $this->preservePageLinks( $parser->mTitle->mArticleID );
@@ -61,8 +56,6 @@ class InterlanguageExtension {
 			$res = $this->linksToWiki( $a );
 		}
 
-		// cache the final result so we can skip all of this
-		$wgMemc->set( $key, $res, time() + 3600 );
 		return $res;
 	}
 

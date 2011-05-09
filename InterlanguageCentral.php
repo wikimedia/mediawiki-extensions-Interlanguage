@@ -1,9 +1,9 @@
 <?php
 /**
- * MediaWiki InterlanguageCentral extension v1.2
+ * MediaWiki InterlanguageCentral extension v1.3
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
- * @version 1.2
+ * @version 1.3
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,25 +25,27 @@
 
 $wgInterlanguageCentralExtensionIndexUrl = "";
 
-$wgExtensionFunctions[]="wfInterlanguageCentralExtension";
 $wgJobClasses['purgeDependentWikis'] = 'InterlanguageCentralExtensionPurgeJob';
 $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage Central',
 	'author'			=> 'Nikola Smolenski',
 	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.1',
+	'version'			=> '1.3',
 	'descriptionmsg'	=> 'interlanguagecentral-desc',
 );
-$wgExtensionMessagesFiles['Interlanguagecentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
+$wgExtensionMessagesFiles['InterlanguageCentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
+$wgExtensionMessagesFiles['InterlanguageCentralMagic'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.magic.php';
 $wgAutoloadClasses['InterlanguageCentralExtensionPurgeJob'] = dirname(__FILE__) .  '/InterlanguageCentralExtensionPurgeJob.php';
 $wgAutoloadClasses['InterlanguageCentralExtension'] = dirname(__FILE__) . '/InterlanguageCentralExtension.php';
+$wgHooks['ParserFirstCallInit'][] = 'wfInterlanguageCentralExtension';
 
-function wfInterlanguageCentralExtension() {
+function wfInterlanguageCentralExtension( $parser ) {
 	global $wgHooks, $wgInterlanguageCentralExtension;
 
 	if( !isset( $wgInterlanguageCentralExtension ) ) {
 		$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
 		$wgHooks['LinksUpdate'][] = $wgInterlanguageCentralExtension;
+		$parser->setFunctionHook( 'languagelink', array( $wgInterlanguageCentralExtension, 'languagelink' ), SFH_NO_HASH );
 	}
 	return true;
 }

@@ -12,11 +12,13 @@
 }
 
 .interwiki-interlanguage > a:link, .interwiki-interlanguage > a:visited {
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==');
+	/* @embed */
+	background-image: url(InterlanguageLinks-Asset-Pencil.png);
 	color: #797979 !important;
 }
 
 .interwiki-interlanguage > a:hover {
-	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==");
+	/* @embed */
+	background-image: url(InterlanguageLinks-Asset-Pencil-Hover.png);
 	color: #0645AD !important;
 }

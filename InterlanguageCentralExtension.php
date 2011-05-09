@@ -4,7 +4,7 @@
  * InterlanguageCentralExtension class
  *
  * Copyright © 2010-2011 Nikola Smolenski <smolensk@eunet.rs>
- * @version 1.2
+ * @version 1.3
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,14 @@
 class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
 	var $oldILL = array();
+
+	function languagelink( &$parser, $lang, $title = "" ) {
+		if( strlen( $lang ) && strlen( $title ) ) {
+			return "[[$lang:$title]][[:$lang:$title]]";
+		} else {
+			return "";
+		}
+	}
 
 	function onLinksUpdate( &$linksUpdate ) {
 		$oldILL = $this->getILL( DB_SLAVE, $linksUpdate->mTitle);
