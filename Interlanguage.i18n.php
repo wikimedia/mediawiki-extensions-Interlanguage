@@ -41,6 +41,15 @@ $messages['ar'] = array(
 	'interlanguage-desc' => 'يجلب الوصلات بين اللغات من ويكي آخر',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'interlanguage-desc' => "Recueye enllaces interllingüísticos d'otra wiki",
+	'interlanguage-pagelinksexplanation' => 'Páxines con enllaces interllingüísticos:',
+	'interlanguage-editlinks' => 'Editar los enllaces',
+);
+
 /** Azerbaijani (Azərbaycanca)
  * @author Sortilegus
  */
