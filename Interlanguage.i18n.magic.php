@@ -1,4 +1,7 @@
 <?php
+/**
+ *
+ */
 
 $magicWords = array();
 
@@ -14,7 +17,7 @@ $magicWords['af'] = array(
 
 /** Arabic (العربية) */
 $magicWords['ar'] = array(
-	'interlanguage' => array( 0, 'بين_اللغات', 'interlanguage' ),
+	'interlanguage' => array( 0, 'بين_اللغات' ),
 );
 
 /** Egyptian Spoken Arabic (مصرى) */
@@ -24,7 +27,7 @@ $magicWords['arz'] = array(
 
 /** Breton (Brezhoneg) */
 $magicWords['br'] = array(
-	'interlanguage' => array( 0, 'etreyezh', 'interlanguage' ),
+	'interlanguage' => array( 0, 'etreyezh' ),
 );
 
 /** Chechen (Нохчийн) */
@@ -57,6 +60,11 @@ $magicWords['lad'] = array(
 	'interlanguage' => array( 0, 'interlingua', 'interidioma', 'interlanguage' ),
 );
 
+/** Macedonian (Македонски) */
+$magicWords['mk'] = array(
+	'interlanguage' => array( 0, 'меѓујазични' ),
+);
+
 /** Malayalam (മലയാളം) */
 $magicWords['ml'] = array(
 	'interlanguage' => array( 0, 'അന്തർഭാഷ' ),
@@ -74,17 +82,7 @@ $magicWords['nl'] = array(
 
 /** Russian (Русский) */
 $magicWords['ru'] = array(
-	'interlanguage' => array( 0, 'межязык', 'interlanguage' ),
-);
-
-/** Serbian Cyrillic ekavian (Српски (ћирилица)>) */
-$messages['sr-ec'] = array(
-	'interlanguage'   => array( '0', 'међујезичје', 'interlanguage' ),
-);
-
-/** Serbian Latin ekavian (Srpski (latinica)) */
-$messages['sr-el'] = array(
-	'interlanguage'   => array( '0', 'меđujezičje', 'interlanguage' ),
+	'interlanguage' => array( 0, 'межязык' ),
 );
 
 /** Ukrainian (Українська) */
