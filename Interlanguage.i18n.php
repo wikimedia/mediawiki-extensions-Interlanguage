@@ -169,6 +169,15 @@ $messages['fr'] = array(
 	'interlanguage-editlinks' => 'Modifier les liens',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'interlanguage-desc' => 'Pèrmèt de ramassar los lims entèrlengoues d’un ôtro vouiqui.',
+	'interlanguage-pagelinksexplanation' => 'Pâges avouéc des lims entèrlengoues',
+	'interlanguage-editlinks' => 'Changiér los lims',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
