@@ -414,6 +414,7 @@ $messages['pt'] = array(
 $messages['pt-br'] = array(
 	'interlanguage-desc' => 'Obtém interwikis de idiomas a partir de outra wiki',
 	'interlanguage-pagelinksexplanation' => 'Páginas com links interidiomas:',
+	'interlanguage-editlinks' => 'Editar links',
 );
 
 /** Tarandíne (Tarandíne)
