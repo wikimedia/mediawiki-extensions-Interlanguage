@@ -340,6 +340,15 @@ $messages['ml'] = array(
 	'interlanguage-desc' => 'മറ്റൊരു വിക്കിയിൽ നിന്നും അന്തർഭാഷാ കണ്ണികൾ എടുക്കുക',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'interlanguage-desc' => 'Mengambil pautan antara bahasa dari wiki lain',
+	'interlanguage-pagelinksexplanation' => 'Laman dengan pautan antara bahasa:',
+	'interlanguage-editlinks' => 'Sunting pautan',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
