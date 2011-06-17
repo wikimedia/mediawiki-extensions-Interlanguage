@@ -66,7 +66,7 @@ class InterlanguageExtension {
 		global $wgInterlanguageExtensionDB, $wgInterlanguageExtensionApiUrl;
 		if ( isset( $wgInterlanguageExtensionDB ) && $wgInterlanguageExtensionDB ) {
 			return $this->getLinksFromDB( $param );
-		} else if ( isset( $wgInterlanguageExtensionApiUrl ) && $wgInterlanguageExtensionApiUrl ) {
+		} elseif ( isset( $wgInterlanguageExtensionApiUrl ) && $wgInterlanguageExtensionApiUrl ) {
 			return $this->getLinksFromApi( $param );
 		} else {
 			return array();
@@ -126,7 +126,7 @@ class InterlanguageExtension {
 	/**
 	 * Get the links from an API
 	 * @return API response
-	 */ 
+	 */
 	function getLinksFromApi( $param ) {
 		global $wgInterlanguageExtensionApiUrl;
 		$title = $this->translateNamespace( $param );
@@ -343,7 +343,7 @@ THEEND;
 	}
 
 	/**
-	 * Preserve the links that are in the article; this will be called in case of an API error. 
+	 * Preserve the links that are in the article; this will be called in case of an API error.
 	 */
 	function preservePageLinks( $articleid ) {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -452,15 +452,15 @@ THEEND;
 			'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'zh-yue', 'diq', 'zea',
 			'bat-smg', 'zh', 'zh-tw', 'zh-cn',
 		);
-	
+
 		if(isset($wgInterlanguageExtensionSortPrepend) && is_array($wgInterlanguageExtensionSortPrepend)) {
 			$order = array_merge($wgInterlanguageExtensionSortPrepend, $order);
 			unset($wgInterlanguageExtensionSortPrepend);
 		}
-	
+
 		$a=array_search($a['lang'], $order);
 		$b=array_search($b['lang'], $order);
-	
+
 		return ($a>$b)?1:(($a<$b)?-1:0);
 	}
 
@@ -502,15 +502,15 @@ THEEND;
 			'vls', 'war', 'wo', 'wuu', 'ts', 'yi', 'yo', 'zh-yue', 'diq', 'zea',
 			'bat-smg', 'zh', 'zh-tw', 'zh-cn',
 		);
-	
+
 		if(isset($wgInterlanguageExtensionSortPrepend) && is_array($wgInterlanguageExtensionSortPrepend)) {
 			$order = array_merge($wgInterlanguageExtensionSortPrepend, $order);
 			unset($wgInterlanguageExtensionSortPrepend);
 		}
-	
+
 		$a=array_search($a['lang'], $order);
 		$b=array_search($b['lang'], $order);
-	
+
 		return ($a>$b)?1:(($a<$b)?-1:0);
 	}
 }
