@@ -396,7 +396,7 @@ $messages['pl'] = array(
 $messages['pms'] = array(
 	'interlanguage-desc' => 'A cheuj anliure antërlenga da àutre wiki',
 	'interlanguage-pagelinksexplanation' => "Pàgine con dj'anliure antra lenghe:",
-	'interlanguage-editlinks' => 'Modifiché Anliure',
+	'interlanguage-editlinks' => "Modifiché j'anliure",
 );
 
 /** Pashto (پښتو)
