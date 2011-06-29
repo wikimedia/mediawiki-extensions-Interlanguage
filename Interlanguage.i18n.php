@@ -97,6 +97,7 @@ $messages['br'] = array(
 $messages['bs'] = array(
 	'interlanguage-desc' => 'Preuzima međujezičke linkove sa druge wiki',
 	'interlanguage-pagelinksexplanation' => 'Stranice sa interwiki linkovima:',
+	'interlanguage-editlinks' => 'Uredi linkove',
 );
 
 /** Catalan (Català)
