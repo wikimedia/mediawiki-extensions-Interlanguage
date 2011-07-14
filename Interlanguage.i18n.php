@@ -492,9 +492,12 @@ $messages['su'] = array(
 
 /** Swedish (Svenska)
  * @author Per
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'interlanguage-desc' => 'Hämtar språklänkar från andra wikis',
+	'interlanguage-pagelinksexplanation' => 'Sidor med språklänkar:',
+	'interlanguage-editlinks' => 'Redigera länkar',
 );
 
 /** Telugu (తెలుగు)
