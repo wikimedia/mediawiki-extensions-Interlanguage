@@ -446,7 +446,7 @@ $messages['ru'] = array(
 	'interlanguage-editlinks' => 'Править ссылки',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
