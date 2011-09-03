@@ -284,11 +284,13 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Schu
  * @author 青子守歌
  */
 $messages['ja'] = array(
 	'interlanguage-desc' => '言語間リンクをほかのウィキから取得する',
 	'interlanguage-pagelinksexplanation' => '言語間リンクのあるページ：',
+	'interlanguage-editlinks' => 'リンクの編集',
 );
 
 /** Khmer (ភាសាខ្មែរ)
