@@ -47,6 +47,10 @@ $wgResourceModules['ext.Interlanguage'] = array(
 	'remoteExtPath' => 'Interlanguage',
 );
 
+/**
+ * @param $parser Parser
+ * @return bool
+ */
 function wfInterlanguageExtension( $parser ) {
 	global $wgHooks, $wgInterlanguageExtension;
 

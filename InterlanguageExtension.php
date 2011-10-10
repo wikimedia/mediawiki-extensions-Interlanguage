@@ -25,8 +25,17 @@
  */
 
 class InterlanguageExtension {
+
+	/**
+	 * @var DatabaseBase
+	 */
 	var $foreignDbr = false;
 
+	/**
+	 * @param $magicWords array
+	 * @param $langCode string
+	 * @return bool
+	 */
 	function onLanguageGetMagic( &$magicWords, $langCode ) {
 		$magicWords['interlanguage'] = array(0, 'interlanguage');
 		return true;
@@ -35,12 +44,10 @@ class InterlanguageExtension {
 	/**
 	 * The meat of the extension, the function that handles {{interlanguage:}} magic.
 	 *
-	 * @param	$parser - standard Parser object.
-	 * @param	$param - parameter passed to {{interlanguage:}}.
+	 * @param $parser Parser standard Parser object.
+	 * @param $param parameter passed to {{interlanguage:}}.
 	 */
 	function interlanguage( &$parser, $param ) {
-		global $wgMemc;
-
 		$this->addPageLink( $parser->getOutput(), $param );
 		$parser->getOutput()->addModules( 'ext.Interlanguage' );
 
@@ -49,9 +56,7 @@ class InterlanguageExtension {
 
 		if($res === false) {
 			list( $res, $a ) = $this->preservePageLinks( $parser->mTitle->mArticleID );
-		}
-
-		if($res === true) {
+		} elseif ($res === true) {
 			$this->sortLinks( $a );
 			$res = $this->linksToWiki( $a );
 		}
@@ -173,6 +178,9 @@ class InterlanguageExtension {
 
 	/**
 	 * Add a page to the list of page links. It will later be used by pageLinks().
+	 *
+	 * @param $parserOutput ParserOutput
+	 * @param $param
 	 */
 	function addPageLink( &$parserOutput, $param ) {
 		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
@@ -186,7 +194,7 @@ class InterlanguageExtension {
 	/**
 	 * Get the list of page links.
 	 *
-	 * @param $parserOutput
+	 * @param $parserOutput ParserOutput
 	 * @return Array of page links. Empty array if there are no links, literal false if links have not
 	 * been yet set.
 	 */
@@ -303,8 +311,8 @@ THEEND;
 	/**
 	 * Make an array of Titles from the array of links.
 	 *
-	* @param		$pagelinks Array of page links.
-	 * @returns	Array of Title objects.  If there are no page links, an empty array is returned.
+	* @param	$pagelinks Array of page links.
+	 * @return	Array of Title objects.  If there are no page links, an empty array is returned.
 	 */
 	function makePageLinkTitles( $pagelinks ) {
 		global $wgInterlanguageExtensionInterwiki;
@@ -328,7 +336,7 @@ THEEND;
 	 * on this wiki by {{interlanguage:}} magic. Pagenames are array keys.
 	 *
 	 * @param	$articleid - ID of the article whose links should be returned.
-	 * @returns	The array. If there are no pages linked, an empty array is returned.
+	 * @return	The array. If there are no pages linked, an empty array is returned.
 	 */
 	function loadPageLinks( $articleid ) {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -356,9 +364,9 @@ THEEND;
 	 * Read interlanguage links from a database, and return them in the same format that API
 	 * uses.
 	 *
-	 * @param	$dbr - Database.
-	 * @param	$articleid - ID of the article whose links should be returned.
-	 * @returns	The array with the links. If there are no links, an empty array is returned.
+	 * @param	$dbr DatabaseBase
+	 * @param	$articleid int ID of the article whose links should be returned.
+	 * @return	The array with the links. If there are no links, an empty array is returned.
 	 */
 	function readLinksFromDB( $dbr, $articleid ) {
 		$res = $dbr->select(
@@ -371,7 +379,6 @@ THEEND;
 		foreach( $res as $row ) {
 			$a[] = array( 'lang' => $row->ll_lang, '*' => $row->ll_title );
 		}
-		$res->free();
 		return $a;
 	}
 
