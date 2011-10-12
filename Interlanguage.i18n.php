@@ -540,6 +540,8 @@ $messages['uk'] = array(
  */
 $messages['vi'] = array(
 	'interlanguage-desc' => 'Lấy liên kết giữa ngôn ngữ từ wiki khác',
+	'interlanguage-pagelinksexplanation' => 'Trang có liên kết ngoại ngữ',
+	'interlanguage-editlinks' => 'Sửa đổi liên kết',
 );
 
 /** Yiddish (ייִדיש)
