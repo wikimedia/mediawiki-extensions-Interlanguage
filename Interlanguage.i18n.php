@@ -189,11 +189,13 @@ $messages['gl'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
 	'interlanguage-desc' => 'Holt Interwikigleicher us eme andere Wiki',
 	'interlanguage-pagelinksexplanation' => 'Syte mit Links zu andere Sprache',
+	'interlanguage-editlinks' => 'Links bearbeite',
 );
 
 /** Manx (Gaelg)
