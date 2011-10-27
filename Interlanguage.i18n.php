@@ -238,6 +238,7 @@ $messages['hr'] = array(
 $messages['hsb'] = array(
 	'interlanguage-desc' => 'Zběra mjezyrěčne wotkazy z druheho wikija',
 	'interlanguage-pagelinksexplanation' => 'Strony z mjezyrěčnymi wotkazami',
+	'interlanguage-editlinks' => 'Wotkazy wobdźěłać',
 );
 
 /** Hungarian (Magyar)
