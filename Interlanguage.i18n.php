@@ -389,10 +389,12 @@ $messages['oc'] = array(
 
 /** Polish (Polski)
  * @author Sp5uhe
+ * @author Woytecr
  */
 $messages['pl'] = array(
 	'interlanguage-desc' => 'Przechwytuje linki do projektów w innych językach z innej wiki',
 	'interlanguage-pagelinksexplanation' => 'Strony z linkami do wersji w innych językach:',
+	'interlanguage-editlinks' => 'Zarządzaj linkami',
 );
 
 /** Piedmontese (Piemontèis)
