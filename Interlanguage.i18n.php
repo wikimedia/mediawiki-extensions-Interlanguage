@@ -124,6 +124,7 @@ $messages['de'] = array(
 $messages['dsb'] = array(
 	'interlanguage-desc' => 'Zběra mjazyrěcne wótkaze z drugego wikija',
 	'interlanguage-pagelinksexplanation' => 'Boki z wótkazami mjazy rozdźělnymi rěcami',
+	'interlanguage-editlinks' => 'Wótkaze wobźěłaś',
 );
 
 /** Greek (Ελληνικά)
