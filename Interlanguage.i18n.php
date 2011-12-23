@@ -489,6 +489,8 @@ $messages['sr-ec'] = array(
 /** Serbian (Latin script) (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'interlanguage-desc' => 'Preuzima međuviki sa drugog projekta',
+	'interlanguage-pagelinksexplanation' => 'Stranice sa međujezičkim vezama:',
+	'interlanguage-editlinks' => 'Uredi veze',
 );
 
 /** Sundanese (Basa Sunda)
@@ -563,5 +565,11 @@ $messages['yi'] = array(
 $messages['zh-hans'] = array(
 	'interlanguage-desc' => '抓住从另一个维基语链接',
 	'interlanguage-pagelinksexplanation' => '中介语的链接的页：',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬) */
+$messages['zh-hant'] = array(
+	'interlanguage-desc' => '抓住從另一個維基語鏈接',
+	'interlanguage-pagelinksexplanation' => '中介語的鏈接的頁：',
 );
 
