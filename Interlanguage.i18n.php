@@ -375,7 +375,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'interlanguage-desc' => 'Henter språklenker fra andre wikier',
 	'interlanguage-pagelinksexplanation' => 'Sider med språklenker:',
 	'interlanguage-editlinks' => 'Rediger lenker',
