@@ -356,6 +356,15 @@ $messages['ms'] = array(
 	'interlanguage-editlinks' => 'Sunting pautan',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'interlanguage-desc' => 'Henter språklenker fra andre wikier',
+	'interlanguage-pagelinksexplanation' => 'Sider med språklenker:',
+	'interlanguage-editlinks' => 'Rediger lenker',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -370,15 +379,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'interlanguage-desc' => 'Hentar språklenkjer frå ein annan wiki',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'interlanguage-desc' => 'Henter språklenker fra andre wikier',
-	'interlanguage-pagelinksexplanation' => 'Sider med språklenker:',
-	'interlanguage-editlinks' => 'Rediger lenker',
 );
 
 /** Occitan (Occitan)
