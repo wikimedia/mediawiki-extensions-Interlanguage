@@ -42,7 +42,7 @@ $magicWords['eo'] = array(
 
 /** Spanish (Español) */
 $magicWords['es'] = array(
-	'interlanguage' => array( 0, 'interidioma', 'interlanguage' ),
+	'interlanguage' => array( 0, 'interidioma' ),
 );
 
 /** Italian (Italiano) */
@@ -83,6 +83,11 @@ $magicWords['nl'] = array(
 /** Russian (Русский) */
 $magicWords['ru'] = array(
 	'interlanguage' => array( 0, 'межязык' ),
+);
+
+/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+$magicWords['sr-el'] = array(
+	'interlanguage' => array( 0, 'unutrašnji_jezik' ),
 );
 
 /** Ukrainian (Українська) */
