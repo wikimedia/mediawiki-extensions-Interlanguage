@@ -25,21 +25,10 @@
  */
 
 class InterlanguageExtension {
-
 	/**
 	 * @var DatabaseBase
 	 */
 	var $foreignDbr = false;
-
-	/**
-	 * @param $magicWords array
-	 * @param $langCode string
-	 * @return bool
-	 */
-	function onLanguageGetMagic( &$magicWords, $langCode ) {
-		$magicWords['interlanguage'] = array(0, 'interlanguage');
-		return true;
-	}
 
 	/**
 	 * The meat of the extension, the function that handles {{interlanguage:}} magic.
