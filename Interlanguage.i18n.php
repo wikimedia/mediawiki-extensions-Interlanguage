@@ -133,12 +133,14 @@ $messages['el'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Translationista
  */
 $messages['es'] = array(
 	'interlanguage-desc' => 'Coge vínculos interidiomáticos de otro wiki',
 	'interlanguage-pagelinksexplanation' => 'Páginas con enlaces interidioma:',
+	'interlanguage-editlinks' => 'Editar los enlaces',
 );
 
 /** Basque (Euskara)
