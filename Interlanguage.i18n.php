@@ -276,6 +276,15 @@ $messages['ig'] = array(
 	'interlanguage-desc' => 'Na kpá jikodo MétúáríAsụsụ shí wiki ozor',
 );
 
+/** Icelandic (Íslenska)
+ * @author Snævar
+ */
+$messages['is'] = array(
+	'interlanguage-desc' => 'Sækir tungumálatengla frá öðrum wiki',
+	'interlanguage-pagelinksexplanation' => 'Síður með tungumálatengla:',
+	'interlanguage-editlinks' => 'Breyta tenglum',
+);
+
 /** Italian (Italiano)
  * @author Beta16
  * @author Darth Kule
