@@ -570,10 +570,12 @@ $messages['yi'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Hydra
+ * @author Linforest
  */
 $messages['zh-hans'] = array(
 	'interlanguage-desc' => '抓住从另一个维基语链接',
 	'interlanguage-pagelinksexplanation' => '中介语的链接的页：',
+	'interlanguage-editlinks' => '编辑链接',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬) */
