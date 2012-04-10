@@ -45,7 +45,9 @@ class InterlanguageExtension {
 
 		if($res === false) {
 			list( $res, $a ) = $this->preservePageLinks( $parser->mTitle->mArticleID );
-		} elseif ($res === true) {
+		}
+
+		if ($res === true) {
 			$this->sortLinks( $a );
 			$res = $this->linksToWiki( $a );
 		}
