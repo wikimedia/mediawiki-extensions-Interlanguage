@@ -50,10 +50,12 @@ $messages['ast'] = array(
 
 /** Azerbaijani (Azərbaycanca)
  * @author Sortilegus
+ * @author Wertuose
  */
 $messages['az'] = array(
 	'interlanguage-desc' => 'Digər vikidən dillərarası keçidləri tutur',
 	'interlanguage-pagelinksexplanation' => 'Dillərarası keçidləri olan səhifələr:',
+	'interlanguage-editlinks' => 'Keçidləri redaktə et',
 );
 
 /** Belarusian (Беларуская)
@@ -298,11 +300,12 @@ $messages['it'] = array(
 /** Japanese (日本語)
  * @author Aotake
  * @author Schu
+ * @author Shirayuki
  * @author 青子守歌
  */
 $messages['ja'] = array(
-	'interlanguage-desc' => '言語間リンクをほかのウィキから取得する',
-	'interlanguage-pagelinksexplanation' => '言語間リンクのあるページ：',
+	'interlanguage-desc' => '言語間リンクを他のウィキから取得する',
+	'interlanguage-pagelinksexplanation' => '言語間リンクがあるページ：',
 	'interlanguage-editlinks' => 'リンクの編集',
 );
 
