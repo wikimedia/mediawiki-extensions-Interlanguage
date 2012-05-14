@@ -479,6 +479,8 @@ $messages['sah'] = array(
  */
 $messages['sk'] = array(
 	'interlanguage-desc' => 'Získa medzijazykové odkazy z inej wiki',
+	'interlanguage-pagelinksexplanation' => 'Stránky s jazykovými odkazmi:',
+	'interlanguage-editlinks' => 'Upraviť odkazy',
 );
 
 /** Slovenian (Slovenščina)
