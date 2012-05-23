@@ -35,6 +35,11 @@ $magicWords['ce'] = array(
 	'interlanguage' => array( 0, 'меттиюкъ', 'межязык', 'interlanguage' ),
 );
 
+/** German (Deutsch) */
+$magicWords['de'] = array(
+	'interlanguage' => array( 0, 'intersprache' ),
+);
+
 /** Esperanto (Esperanto) */
 $magicWords['eo'] = array(
 	'interlanguage' => array( 0, 'interlingvo' ),
@@ -92,7 +97,7 @@ $magicWords['sr-el'] = array(
 
 /** Ukrainian (Українська) */
 $magicWords['uk'] = array(
-	'interlanguage' => array( 0, 'міжмова', 'межязык', 'interlanguage' ),
+	'interlanguage' => array( 0, 'міжмова', 'межязык' ),
 );
 
 /** Vietnamese (Tiếng Việt) */
