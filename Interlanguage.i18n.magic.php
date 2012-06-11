@@ -25,7 +25,7 @@ $magicWords['arz'] = array(
 	'interlanguage' => array( 0, 'بين_اللغات', 'interlanguage' ),
 );
 
-/** Breton (Brezhoneg) */
+/** Breton (brezhoneg) */
 $magicWords['br'] = array(
 	'interlanguage' => array( 0, 'etreyezh' ),
 );
@@ -40,17 +40,22 @@ $magicWords['de'] = array(
 	'interlanguage' => array( 0, 'intersprache' ),
 );
 
+/** Zazaki (Zazaki) */
+$magicWords['diq'] = array(
+	'interlanguage' => array( 0, 'şarzıwan' ),
+);
+
 /** Esperanto (Esperanto) */
 $magicWords['eo'] = array(
 	'interlanguage' => array( 0, 'interlingvo' ),
 );
 
-/** Spanish (Español) */
+/** Spanish (español) */
 $magicWords['es'] = array(
 	'interlanguage' => array( 0, 'interidioma' ),
 );
 
-/** Italian (Italiano) */
+/** Italian (italiano) */
 $magicWords['it'] = array(
 	'interlanguage' => array( 0, 'interlingua' ),
 );
@@ -60,12 +65,17 @@ $magicWords['ja'] = array(
 	'interlanguage' => array( 0, '言語間' ),
 );
 
+/** Korean (한국어) */
+$magicWords['ko'] = array(
+	'interlanguage' => array( 0, '인터언어' ),
+);
+
 /** Ladino (Ladino) */
 $magicWords['lad'] = array(
 	'interlanguage' => array( 0, 'interlingua', 'interidioma', 'interlanguage' ),
 );
 
-/** Macedonian (Македонски) */
+/** Macedonian (македонски) */
 $magicWords['mk'] = array(
 	'interlanguage' => array( 0, 'меѓујазични' ),
 );
@@ -85,17 +95,17 @@ $magicWords['nl'] = array(
 	'interlanguage' => array( 0, 'intertaal' ),
 );
 
-/** Russian (Русский) */
+/** Russian (русский) */
 $magicWords['ru'] = array(
 	'interlanguage' => array( 0, 'межязык' ),
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $magicWords['sr-el'] = array(
 	'interlanguage' => array( 0, 'unutrašnji_jezik' ),
 );
 
-/** Ukrainian (Українська) */
+/** Ukrainian (українська) */
 $magicWords['uk'] = array(
 	'interlanguage' => array( 0, 'міжмова', 'межязык' ),
 );
