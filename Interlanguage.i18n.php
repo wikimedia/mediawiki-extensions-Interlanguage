@@ -39,7 +39,7 @@ $messages['ar'] = array(
 	'interlanguage-desc' => 'يجلب الوصلات بين اللغات من ويكي آخر',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -48,7 +48,7 @@ $messages['ast'] = array(
 	'interlanguage-editlinks' => 'Editar los enllaces',
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Sortilegus
  * @author Wertuose
  */
@@ -58,7 +58,7 @@ $messages['az'] = array(
 	'interlanguage-editlinks' => 'Keçidləri redaktə et',
 );
 
-/** Belarusian (Беларуская)
+/** Belarusian (беларуская)
  * @author Хомелка
  */
 $messages['be'] = array(
@@ -82,7 +82,7 @@ $messages['bn'] = array(
 	'interlanguage-editlinks' => 'সংযোগ সম্পাদনা',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -91,7 +91,7 @@ $messages['br'] = array(
 	'interlanguage-editlinks' => 'Kemmañ al liammoù',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -100,7 +100,7 @@ $messages['bs'] = array(
 	'interlanguage-editlinks' => 'Uredi linkove',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Paucabot
  */
 $messages['ca'] = array(
@@ -134,7 +134,7 @@ $messages['el'] = array(
 	'interlanguage-desc' => 'Επιλέγει τυχαία συνδέσμους μεταξύ γλωσσών από ένα άλλο wiki',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Armando-Martin
  * @author Crazymadlover
  * @author Translationista
@@ -145,14 +145,14 @@ $messages['es'] = array(
 	'interlanguage-editlinks' => 'Editar los enlaces',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author Theklan
  */
 $messages['eu'] = array(
 	'interlanguage-desc' => 'Beste wiki bateko hizkuntzen arteko loturak hartzen ditu',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Centerlink
  * @author Crt
  * @author Nike
@@ -162,7 +162,7 @@ $messages['fi'] = array(
 	'interlanguage-pagelinksexplanation' => 'Sivut, joilla on kieltenvälisiä linkkejä:',
 );
 
-/** French (Français)
+/** French (français)
  * @author IAlex
  * @author Peter17
  * @author Verdy p
@@ -173,7 +173,7 @@ $messages['fr'] = array(
 	'interlanguage-editlinks' => 'Modifier les liens',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -226,7 +226,7 @@ $messages['hil'] = array(
 	'interlanguage-desc' => 'Gakuha sang interlengwahe halin sa lain nga wiki',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Mnalis
  * @author SpeedyGonsales
  */
@@ -244,14 +244,14 @@ $messages['hsb'] = array(
 	'interlanguage-editlinks' => 'Wotkazy wobdźěłać',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
 	'interlanguage-desc' => 'Nyelvközi hivatkozások átvétele más wikiből',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -278,7 +278,7 @@ $messages['ig'] = array(
 	'interlanguage-desc' => 'Na kpá jikodo MétúáríAsụsụ shí wiki ozor',
 );
 
-/** Icelandic (Íslenska)
+/** Icelandic (íslenska)
  * @author Snævar
  */
 $messages['is'] = array(
@@ -287,7 +287,7 @@ $messages['is'] = array(
 	'interlanguage-editlinks' => 'Breyta tenglum',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Beta16
  * @author Darth Kule
  */
@@ -336,14 +336,14 @@ $messages['lb'] = array(
 	'interlanguage-editlinks' => 'Linken änneren',
 );
 
-/** Latvian (Latviešu)
+/** Latvian (latviešu)
  * @author Xil
  */
 $messages['lv'] = array(
 	'interlanguage-desc' => 'Paņem starpvalodu saites no citas wiki',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -386,7 +386,7 @@ $messages['nl'] = array(
 	'interlanguage-editlinks' => 'Verwijzingen bewerken',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -394,14 +394,14 @@ $messages['nn'] = array(
 	'interlanguage-desc' => 'Hentar språklenkjer frå ein annan wiki',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
 	'interlanguage-desc' => 'Permet de collectar los ligams interlengas d’un autre wiki',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Sp5uhe
  * @author Woytecr
  */
@@ -428,7 +428,7 @@ $messages['ps'] = array(
 	'interlanguage-desc' => 'له يوه بل ويکي نه د ژبو خپلمنځي تړنې را اخلي',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Giro720
  * @author Hamilton Abreu
  */
@@ -438,7 +438,7 @@ $messages['pt'] = array(
 	'interlanguage-editlinks' => 'Editar Links',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  * @author Giro720
  */
@@ -448,7 +448,7 @@ $messages['pt-br'] = array(
 	'interlanguage-editlinks' => 'Editar links',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -456,7 +456,7 @@ $messages['roa-tara'] = array(
 	'interlanguage-pagelinksexplanation' => 'Pàggen cu le colledaminde a otre Uicchi:',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author MaxSem
  * @author Prima klasy4na
  * @author Александр Сигачёв
@@ -467,14 +467,14 @@ $messages['ru'] = array(
 	'interlanguage-editlinks' => 'Править ссылки',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
 	'interlanguage-desc' => 'Атын тылларынан суруллубут биикилэртэн сигэлэри булар',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -483,7 +483,7 @@ $messages['sk'] = array(
 	'interlanguage-editlinks' => 'Upraviť odkazy',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
@@ -492,7 +492,7 @@ $messages['sl'] = array(
 	'interlanguage-editlinks' => 'Uredi povezave',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -501,7 +501,7 @@ $messages['sr-ec'] = array(
 	'interlanguage-editlinks' => 'Уреди везе',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'interlanguage-desc' => 'Preuzima međuviki sa drugog projekta',
 	'interlanguage-pagelinksexplanation' => 'Stranice sa međujezičkim vezama:',
@@ -515,7 +515,7 @@ $messages['su'] = array(
 	'interlanguage-desc' => 'Nyokot tutumbu antarbasa ti wiki séjén',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Per
  * @author WikiPhoenix
  */
@@ -548,7 +548,7 @@ $messages['tr'] = array(
 	'interlanguage-desc' => 'Başka bir vikiden dillerarası bağlantıları alır',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Prima klasy4na
  * @author Тест
  */
@@ -574,7 +574,7 @@ $messages['yi'] = array(
 	'interlanguage-desc' => 'נעמט אינטערשפראַך לינקען פון אַן אַנדער וויקי',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Hydra
  * @author Linforest
  */
@@ -584,7 +584,7 @@ $messages['zh-hans'] = array(
 	'interlanguage-editlinks' => '编辑链接',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文（繁體）‬) */
 $messages['zh-hant'] = array(
 	'interlanguage-desc' => '抓住從另一個維基語鏈接',
 	'interlanguage-pagelinksexplanation' => '中介語的鏈接的頁：',
