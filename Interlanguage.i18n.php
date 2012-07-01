@@ -65,7 +65,7 @@ $messages['be'] = array(
 	'interlanguage-desc' => 'Пераносіць міжмоўныя спасылкі з іншых вікі',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author Jim-by
  * @author Wizardist
  */
@@ -118,7 +118,7 @@ $messages['de'] = array(
 	'interlanguage-editlinks' => 'Links bearbeiten',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -182,7 +182,7 @@ $messages['frp'] = array(
 	'interlanguage-editlinks' => 'Changiér los lims',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -235,7 +235,7 @@ $messages['hr'] = array(
 	'interlanguage-pagelinksexplanation' => 'Stranice s međuwiki poveznicama:',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
