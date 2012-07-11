@@ -368,7 +368,7 @@ $messages['ms'] = array(
 	'interlanguage-editlinks' => 'Sunting pautan',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
