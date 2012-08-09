@@ -107,6 +107,13 @@ $messages['ca'] = array(
 	'interlanguage-desc' => "Recull interwikis d'una altra wiki",
 );
 
+/** Czech (česky)
+ * @author Chmee2
+ */
+$messages['cs'] = array(
+	'interlanguage-editlinks' => 'Upravit odkaz',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Marcel083
@@ -584,9 +591,12 @@ $messages['zh-hans'] = array(
 	'interlanguage-editlinks' => '编辑链接',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬) */
+/** Traditional Chinese (‪中文（繁體）‬)
+ * @author Simon Shek
+ */
 $messages['zh-hant'] = array(
 	'interlanguage-desc' => '抓住從另一個維基語鏈接',
 	'interlanguage-pagelinksexplanation' => '中介語的鏈接的頁：',
+	'interlanguage-editlinks' => '編輯連結',
 );
 
