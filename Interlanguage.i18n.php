@@ -316,6 +316,13 @@ $messages['ja'] = array(
 	'interlanguage-editlinks' => 'リンクの編集',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'interlanguage-editlinks' => 'ბმულების რედაქტირება',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author គីមស៊្រុន
  */
