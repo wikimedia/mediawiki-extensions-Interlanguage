@@ -338,7 +338,7 @@ $messages['km'] = array(
 $messages['ksh'] = array(
 	'interlanguage-desc' => 'Hollt de Lenks zwesche de Shprooche vun enem ander Wiki.',
 	'interlanguage-pagelinksexplanation' => 'Atikele met Lenks op ander Shprooche',
-	'interlanguage-editlinks' => 'De Shproochelenks ändere',
+	'interlanguage-editlinks' => 'de Schproochelengks ändere',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
