@@ -539,6 +539,13 @@ $messages['sv'] = array(
 	'interlanguage-editlinks' => 'Redigera länkar',
 );
 
+/** Tamil (தமிழ்)
+ * @author Karthi.dr
+ */
+$messages['ta'] = array(
+	'interlanguage-pagelinksexplanation' => 'பிற மொழி இணைப்புள்ள பக்கங்கள்:',
+);
+
 /** Telugu (తెలుగు)
  * @author Kiranmayee
  */
