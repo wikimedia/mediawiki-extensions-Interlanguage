@@ -581,6 +581,13 @@ $messages['uk'] = array(
 	'interlanguage-editlinks' => 'Редагувати інтервікі',
 );
 
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'interlanguage-editlinks' => 'لنکس میں ترمیم کریں',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
