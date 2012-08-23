@@ -153,10 +153,12 @@ $messages['es'] = array(
 );
 
 /** Basque (euskara)
+ * @author An13sa
  * @author Theklan
  */
 $messages['eu'] = array(
 	'interlanguage-desc' => 'Beste wiki bateko hizkuntzen arteko loturak hartzen ditu',
+	'interlanguage-editlinks' => 'Aldatu loturak',
 );
 
 /** Finnish (suomi)
