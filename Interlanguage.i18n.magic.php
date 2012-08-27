@@ -105,6 +105,11 @@ $magicWords['sr-el'] = array(
 	'interlanguage' => array( 0, 'unutrašnji_jezik' ),
 );
 
+/** Turkish (Türkçe) */
+$magicWords['tr'] = array(
+	'interlanguage' => array( 0, 'dillerarası' ),
+);
+
 /** Ukrainian (українська) */
 $magicWords['uk'] = array(
 	'interlanguage' => array( 0, 'міжмова', 'межязык' ),
