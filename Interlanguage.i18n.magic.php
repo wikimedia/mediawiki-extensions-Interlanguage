@@ -100,7 +100,7 @@ $magicWords['ru'] = array(
 	'interlanguage' => array( 0, 'межязык' ),
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $magicWords['sr-el'] = array(
 	'interlanguage' => array( 0, 'unutrašnji_jezik' ),
 );
