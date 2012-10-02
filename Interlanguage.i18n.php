@@ -65,7 +65,7 @@ $messages['be'] = array(
 	'interlanguage-desc' => 'Пераносіць міжмоўныя спасылкі з іншых вікі',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Jim-by
  * @author Wizardist
  */
@@ -386,7 +386,7 @@ $messages['ms'] = array(
 	'interlanguage-editlinks' => 'Sunting pautan',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -404,7 +404,7 @@ $messages['nl'] = array(
 	'interlanguage-editlinks' => 'Verwijzingen bewerken',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -510,7 +510,7 @@ $messages['sl'] = array(
 	'interlanguage-editlinks' => 'Uredi povezave',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -519,7 +519,7 @@ $messages['sr-ec'] = array(
 	'interlanguage-editlinks' => 'Уреди везе',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $messages['sr-el'] = array(
 	'interlanguage-desc' => 'Preuzima međuviki sa drugog projekta',
 	'interlanguage-pagelinksexplanation' => 'Stranice sa međujezičkim vezama:',
@@ -606,7 +606,7 @@ $messages['yi'] = array(
 	'interlanguage-desc' => 'נעמט אינטערשפראַך לינקען פון אַן אַנדער וויקי',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Hydra
  * @author Linforest
  */
@@ -616,7 +616,7 @@ $messages['zh-hans'] = array(
 	'interlanguage-editlinks' => '编辑链接',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Simon Shek
  */
 $messages['zh-hant'] = array(
