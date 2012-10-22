@@ -519,7 +519,8 @@ $messages['sr-ec'] = array(
 	'interlanguage-editlinks' => 'Уреди везе',
 );
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)‎)
+ */
 $messages['sr-el'] = array(
 	'interlanguage-desc' => 'Preuzima međuviki sa drugog projekta',
 	'interlanguage-pagelinksexplanation' => 'Stranice sa međujezičkim vezama:',
@@ -624,4 +625,3 @@ $messages['zh-hant'] = array(
 	'interlanguage-pagelinksexplanation' => '中介語的鏈接的頁：',
 	'interlanguage-editlinks' => '編輯連結',
 );
-
