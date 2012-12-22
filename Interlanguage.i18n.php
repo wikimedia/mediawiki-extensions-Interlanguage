@@ -475,6 +475,15 @@ $messages['pt-br'] = array(
 	'interlanguage-editlinks' => 'Editar links',
 );
 
+/** Romanian (română)
+ * @author Firilacroco
+ * @author Minisarm
+ */
+$messages['ro'] = array(
+	'interlanguage-pagelinksexplanation' => 'Pagini cu legături interlinguale:',
+	'interlanguage-editlinks' => 'Modifică legăturile',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
