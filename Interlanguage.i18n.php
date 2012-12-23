@@ -363,6 +363,13 @@ $messages['lb'] = array(
 	'interlanguage-editlinks' => 'Linken änneren',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'interlanguage-editlinks' => 'Redaguoti nuorodas',
+);
+
 /** Latvian (latviešu)
  * @author Xil
  */
@@ -508,6 +515,13 @@ $messages['ru'] = array(
  */
 $messages['sah'] = array(
 	'interlanguage-desc' => 'Атын тылларынан суруллубут биикилэртэн сигэлэри булар',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'interlanguage-editlinks' => 'සබැඳිය සංස්කරණය කරන්න',
 );
 
 /** Slovak (slovenčina)
