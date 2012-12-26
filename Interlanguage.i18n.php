@@ -521,6 +521,7 @@ $messages['sah'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'interlanguage-pagelinksexplanation' => 'අන්තර්භාෂාමය සබැඳි සහිත පිටු:',
 	'interlanguage-editlinks' => 'සබැඳිය සංස්කරණය කරන්න',
 );
 
@@ -578,9 +579,11 @@ $messages['sv'] = array(
 
 /** Tamil (தமிழ்)
  * @author Karthi.dr
+ * @author Shanmugamp7
  */
 $messages['ta'] = array(
 	'interlanguage-pagelinksexplanation' => 'பிற மொழி இணைப்புள்ள பக்கங்கள்:',
+	'interlanguage-editlinks' => 'இணைப்புக்களைத் தொகு',
 );
 
 /** Telugu (తెలుగు)
