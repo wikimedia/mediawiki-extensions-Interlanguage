@@ -256,10 +256,13 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (magyar)
+ * @author Dj
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
 	'interlanguage-desc' => 'Nyelvközi hivatkozások átvétele más wikiből',
+	'interlanguage-pagelinksexplanation' => 'Nyelvközi hivatkozással rendelkező lapok:',
+	'interlanguage-editlinks' => 'Hivatkozások szerkesztése',
 );
 
 /** Interlingua (interlingua)
