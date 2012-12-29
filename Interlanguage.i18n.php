@@ -136,9 +136,11 @@ $messages['dsb'] = array(
 
 /** Greek (Ελληνικά)
  * @author Omnipaedista
+ * @author ZaDiak
  */
 $messages['el'] = array(
 	'interlanguage-desc' => 'Επιλέγει τυχαία συνδέσμους μεταξύ γλωσσών από ένα άλλο wiki',
+	'interlanguage-editlinks' => 'Επεξεργασία συνδέσεων',
 );
 
 /** Spanish (español)
