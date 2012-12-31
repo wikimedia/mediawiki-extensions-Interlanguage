@@ -420,9 +420,9 @@ $messages['nb'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'interlanguage-desc' => 'Haalt intertaalverwijzingen uit een andere wiki',
-	'interlanguage-pagelinksexplanation' => "Pagina's met taalverwijzingen:",
-	'interlanguage-editlinks' => 'Verwijzingen bewerken',
+	'interlanguage-desc' => 'Haalt intertaalkoppelingen uit een andere wiki',
+	'interlanguage-pagelinksexplanation' => "Pagina's met taalkoppelingen:",
+	'interlanguage-editlinks' => 'Koppelingen bewerken',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
