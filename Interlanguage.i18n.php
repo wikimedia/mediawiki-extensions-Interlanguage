@@ -135,12 +135,13 @@ $messages['dsb'] = array(
 );
 
 /** Greek (Ελληνικά)
+ * @author Glavkos
  * @author Omnipaedista
  * @author ZaDiak
  */
 $messages['el'] = array(
 	'interlanguage-desc' => 'Επιλέγει τυχαία συνδέσμους μεταξύ γλωσσών από ένα άλλο wiki',
-	'interlanguage-editlinks' => 'Επεξεργασία συνδέσεων',
+	'interlanguage-editlinks' => 'Επεξεργασία συνδέσμων',
 );
 
 /** Spanish (español)
