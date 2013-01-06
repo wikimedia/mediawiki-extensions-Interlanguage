@@ -422,7 +422,7 @@ $messages['nb'] = array(
  */
 $messages['nl'] = array(
 	'interlanguage-desc' => 'Haalt intertaalkoppelingen uit een andere wiki',
-	'interlanguage-pagelinksexplanation' => "Pagina's met taalkoppelingen:",
+	'interlanguage-pagelinksexplanation' => "Pagina's met intertaalkoppelingen:",
 	'interlanguage-editlinks' => 'Koppelingen bewerken',
 );
 
