@@ -311,7 +311,7 @@ $messages['is'] = array(
 $messages['it'] = array(
 	'interlanguage-desc' => 'Raccoglie link interlingua da un altro sito wiki',
 	'interlanguage-pagelinksexplanation' => 'Pagine con link interlingua:',
-	'interlanguage-editlinks' => 'Modifica collegamenti',
+	'interlanguage-editlinks' => 'Modifica link',
 );
 
 /** Japanese (日本語)
