@@ -58,6 +58,15 @@ $messages['az'] = array(
 	'interlanguage-editlinks' => 'Keçidləri redaktə et',
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'interlanguage-desc' => 'آیری بیر ویکی‌دن، دیل‌لر-آراسی باغلانتیلاری آلیر',
+	'interlanguage-pagelinksexplanation' => 'دیل‌لر-آراسی باغلانتیلاری اولان صحیفه‌لر:',
+	'interlanguage-editlinks' => 'باغلانتیلاری دَییشدیر',
+);
+
 /** Belarusian (беларуская)
  * @author Хомелка
  */
