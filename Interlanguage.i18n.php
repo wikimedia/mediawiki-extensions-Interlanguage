@@ -475,6 +475,7 @@ $messages['pms'] = array(
  */
 $messages['ps'] = array(
 	'interlanguage-desc' => 'له يوه بل ويکي نه د ژبو خپلمنځي تړنې را اخلي',
+	'interlanguage-editlinks' => 'تړنې سمول',
 );
 
 /** Portuguese (português)
