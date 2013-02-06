@@ -18,11 +18,13 @@ $messages['en'] = array(
  * @author Fryed-peach
  * @author Nikola Smolenski
  * @author Purodha
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
 	'interlanguage-desc' => '{{desc}}',
 	'interlanguage-editlinks' => '[[Image:InterlanguageLinks-Sidebar-Monobook.png|right]]
-This is a link to a page where interlanguage links of the current page can be edited. See the image on the right for how it should look like.',
+This is a link to a page where interlanguage links of the current page can be edited. See the image on the right for how it should look like.
+{{Identical|Edit link}}',
 );
 
 /** Afrikaans (Afrikaans)
