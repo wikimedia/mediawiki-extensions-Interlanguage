@@ -341,6 +341,7 @@ $messages['ja'] = array(
  * @author David1010
  */
 $messages['ka'] = array(
+	'interlanguage-pagelinksexplanation' => 'გვერდები ენათშორისი ბმულებით:',
 	'interlanguage-editlinks' => 'ბმულების რედაქტირება',
 );
 
