@@ -623,10 +623,13 @@ $messages['tl'] = array(
 );
 
 /** Turkish (Türkçe)
+ * @author Emperyan
  * @author Joseph
  */
 $messages['tr'] = array(
 	'interlanguage-desc' => 'Başka bir vikiden dillerarası bağlantıları alır',
+	'interlanguage-pagelinksexplanation' => 'Dillerarası bağlantıları olan sayfalar:',
+	'interlanguage-editlinks' => 'Bağlantıları düzenle',
 );
 
 /** Ukrainian (українська)
