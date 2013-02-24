@@ -333,7 +333,7 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'interlanguage-desc' => '言語間リンクを他のウィキから取得する',
-	'interlanguage-pagelinksexplanation' => '言語間リンクがあるページ：',
+	'interlanguage-pagelinksexplanation' => '言語間リンクがあるページ:',
 	'interlanguage-editlinks' => 'リンクの編集',
 );
 
