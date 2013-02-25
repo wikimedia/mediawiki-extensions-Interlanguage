@@ -86,6 +86,15 @@ $messages['be-tarask'] = array(
 	'interlanguage-editlinks' => 'Рэдагаваць спасылкі',
 );
 
+/** Bulgarian (български)
+ * @author Spiritia
+ */
+$messages['bg'] = array(
+	'interlanguage-desc' => 'Заимства междуезикови препратки от друго уики',
+	'interlanguage-pagelinksexplanation' => 'Страници с междуезикови препратки:',
+	'interlanguage-editlinks' => 'Редактиране',
+);
+
 /** Bengali (বাংলা)
  * @author Wikitanvir
  */
