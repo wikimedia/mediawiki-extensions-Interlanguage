@@ -21,7 +21,7 @@ $messages['en'] = array(
  * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'interlanguage-desc' => '{{desc}}',
+	'interlanguage-desc' => '{{desc|name=Interlanguage|url=http://www.mediawiki.org/wiki/Extension:Interlanguage}}',
 	'interlanguage-editlinks' => '[[Image:InterlanguageLinks-Sidebar-Monobook.png|right]]
 This is a link to a page where interlanguage links of the current page can be edited. See the image on the right for how it should look like.
 {{Identical|Edit link}}',
