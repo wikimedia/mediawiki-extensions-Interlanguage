@@ -136,13 +136,14 @@ $messages['cs'] = array(
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author Les Meloures
  * @author Marcel083
  * @author PasO
  */
 $messages['de'] = array(
 	'interlanguage-desc' => 'Ermöglicht den Abruf von Links zu verbundenen Wikis in anderen Sprachen',
 	'interlanguage-pagelinksexplanation' => 'Seiten mit Links zu verbundenen Wikis in anderen Sprachen',
-	'interlanguage-editlinks' => 'Links bearbeiten',
+	'interlanguage-editlinks' => 'Linken änneren',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -288,6 +289,13 @@ $messages['hu'] = array(
 	'interlanguage-editlinks' => 'Hivatkozások szerkesztése',
 );
 
+/** Armenian (Հայերեն)
+ * @author Vadgt
+ */
+$messages['hy'] = array(
+	'interlanguage-editlinks' => 'Փոխել հղումները',
+);
+
 /** Interlingua (interlingua)
  * @author McDutchie
  */
@@ -370,6 +378,15 @@ $messages['ko'] = array(
 	'interlanguage-desc' => '다른 위키에서 인터언어 링크 가져오기',
 	'interlanguage-pagelinksexplanation' => '인터언어 링크가 있는 문서:',
 	'interlanguage-editlinks' => '링크 편집',
+);
+
+/** Karachay-Balkar (къарачай-малкъар)
+ * @author Iltever
+ */
+$messages['krc'] = array(
+	'interlanguage-desc' => 'Башха викиден тилле арасы джибериулени алады',
+	'interlanguage-pagelinksexplanation' => 'Тилле арасы джибриулери болгъан бетле:',
+	'interlanguage-editlinks' => 'Джибериулени тюрлендир',
 );
 
 /** Colognian (Ripoarisch)
@@ -656,6 +673,13 @@ $messages['uk'] = array(
  */
 $messages['ur'] = array(
 	'interlanguage-editlinks' => 'لنکس میں ترمیم کریں',
+);
+
+/** vèneto (vèneto)
+ * @author Frigotoni
+ */
+$messages['vec'] = array(
+	'interlanguage-editlinks' => 'Canbia link',
 );
 
 /** Vietnamese (Tiếng Việt)
