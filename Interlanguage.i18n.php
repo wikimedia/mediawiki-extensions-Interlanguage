@@ -138,12 +138,13 @@ $messages['cs'] = array(
  * @author Kghbln
  * @author Les Meloures
  * @author Marcel083
+ * @author Metalhead64
  * @author PasO
  */
 $messages['de'] = array(
 	'interlanguage-desc' => 'Ermöglicht den Abruf von Links zu verbundenen Wikis in anderen Sprachen',
 	'interlanguage-pagelinksexplanation' => 'Seiten mit Links zu verbundenen Wikis in anderen Sprachen',
-	'interlanguage-editlinks' => 'Linken änneren',
+	'interlanguage-editlinks' => 'Links bearbeiten',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -696,6 +697,8 @@ $messages['vi'] = array(
  */
 $messages['yi'] = array(
 	'interlanguage-desc' => 'נעמט אינטערשפראַך לינקען פון אַן אַנדער וויקי',
+	'interlanguage-pagelinksexplanation' => 'בלעטער מיט אינטערשפראך לינקען:',
+	'interlanguage-editlinks' => 'רעדאקטירן לינקען',
 );
 
 /** Simplified Chinese (中文（简体）‎)
