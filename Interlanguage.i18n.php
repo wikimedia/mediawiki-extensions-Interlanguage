@@ -400,10 +400,11 @@ $messages['ksh'] = array(
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
-	'interlanguage-desc' => "Erlaabt et d'Linke tëschent Sproochen vun enger anerer Wiki z'iwwerhuelen",
+	'interlanguage-desc' => "Erlaabt et d'Linken tëschent Sproochen vun enger anerer Wiki z'iwwerhuelen",
 	'interlanguage-pagelinksexplanation' => 'Säite mat Linke mat anere Sproochen:',
 	'interlanguage-editlinks' => 'Linken änneren',
 );
@@ -638,6 +639,13 @@ $messages['ta'] = array(
  */
 $messages['te'] = array(
 	'interlanguage-desc' => 'అంతర భాషా లింకులను వేరొక వికీ నుంచి సంపాదిస్తుంది',
+);
+
+/** Thai (ไทย)
+ * @author Nullzero
+ */
+$messages['th'] = array(
+	'interlanguage-editlinks' => 'แก้ไขลิงก์ข้ามภาษา',
 );
 
 /** Tagalog (Tagalog)
