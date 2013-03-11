@@ -684,6 +684,13 @@ $messages['ur'] = array(
 	'interlanguage-editlinks' => 'لنکس میں ترمیم کریں',
 );
 
+/** Uzbek (oʻzbekcha)
+ * @author CoderSI
+ */
+$messages['uz'] = array(
+	'interlanguage-editlinks' => 'Havolalarni tahrirlash',
+);
+
 /** vèneto (vèneto)
  * @author Frigotoni
  */
