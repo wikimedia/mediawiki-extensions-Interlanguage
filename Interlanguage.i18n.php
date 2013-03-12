@@ -399,6 +399,13 @@ $messages['ksh'] = array(
 	'interlanguage-editlinks' => 'de Schproochelengks ändere',
 );
 
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
+ * @author George Animal
+ */
+$messages['ku-latn'] = array(
+	'interlanguage-editlinks' => 'Girêdanan biguherîne',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby
