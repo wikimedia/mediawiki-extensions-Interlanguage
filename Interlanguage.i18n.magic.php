@@ -112,7 +112,7 @@ $magicWords['tr'] = array(
 
 /** Ukrainian (українська) */
 $magicWords['uk'] = array(
-	'interlanguage' => array( 0, 'міжмова', 'межязык' ),
+	'interlanguage' => array( 0, 'міжмова' ),
 );
 
 /** Vietnamese (Tiếng Việt) */
