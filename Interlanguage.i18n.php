@@ -127,6 +127,13 @@ $messages['ca'] = array(
 	'interlanguage-desc' => "Recull interwikis d'una altra wiki",
 );
 
+/** Sorani Kurdish (کوردی)
+ * @author Calak
+ */
+$messages['ckb'] = array(
+	'interlanguage-editlinks' => 'بەستەرەکان دەستکاری بکە',
+);
+
 /** Czech (česky)
  * @author Chmee2
  */
@@ -693,8 +700,10 @@ $messages['ur'] = array(
 
 /** Uzbek (oʻzbekcha)
  * @author CoderSI
+ * @author Sociologist
  */
 $messages['uz'] = array(
+	'interlanguage-pagelinksexplanation' => 'Tillararo havolalar mavjud sahifalar:',
 	'interlanguage-editlinks' => 'Havolalarni tahrirlash',
 );
 
