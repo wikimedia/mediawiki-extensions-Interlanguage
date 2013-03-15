@@ -543,6 +543,13 @@ $messages['pt-br'] = array(
 	'interlanguage-editlinks' => 'Editar links',
 );
 
+/** Quechua (Runa Simi)
+ * @author AlimanRuna
+ */
+$messages['qu'] = array(
+	'interlanguage-editlinks' => "T'inkikunata llamk'apuy",
+);
+
 /** Romanian (română)
  * @author Firilacroco
  * @author Minisarm
