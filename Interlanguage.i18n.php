@@ -707,11 +707,12 @@ $messages['ur'] = array(
 
 /** Uzbek (oʻzbekcha)
  * @author CoderSI
+ * @author Nataev
  * @author Sociologist
  */
 $messages['uz'] = array(
 	'interlanguage-pagelinksexplanation' => 'Tillararo havolalar mavjud sahifalar:',
-	'interlanguage-editlinks' => 'Havolalarni tahrirlash',
+	'interlanguage-editlinks' => 'Ishoratlarni tahrirla',
 );
 
 /** vèneto (vèneto)
