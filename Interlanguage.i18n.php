@@ -154,6 +154,13 @@ $messages['de'] = array(
 	'interlanguage-editlinks' => 'Links bearbeiten',
 );
 
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'interlanguage-editlinks' => 'Gıreyan bıvurne',
+);
+
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
