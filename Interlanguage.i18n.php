@@ -392,7 +392,7 @@ $messages['km'] = array(
  */
 $messages['ko'] = array(
 	'interlanguage-desc' => '다른 위키에서 인터언어 링크 가져오기',
-	'interlanguage-pagelinksexplanation' => '인터언어 링크가 있는 문서:',
+	'interlanguage-pagelinksexplanation' => '언어 인터위키 링크가 있는 문서:',
 	'interlanguage-editlinks' => '링크 편집',
 );
 
