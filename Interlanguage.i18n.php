@@ -620,6 +620,15 @@ $messages['sl'] = array(
 	'interlanguage-editlinks' => 'Uredi povezave',
 );
 
+/** Albanian (shqip)
+ * @author Euriditi
+ */
+$messages['sq'] = array(
+	'interlanguage-desc' => 'Mbledh lidhjet ndërgjuhësore nga një tjetër wiki',
+	'interlanguage-pagelinksexplanation' => 'Faqe me lidhje ndërgjuhësore',
+	'interlanguage-editlinks' => 'Redakto lidhjet',
+);
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
