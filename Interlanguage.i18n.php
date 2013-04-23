@@ -479,6 +479,13 @@ $messages['nb'] = array(
 	'interlanguage-editlinks' => 'Rediger lenker',
 );
 
+/** Low Saxon (Netherlands) (Nedersaksies)
+ * @author Servien
+ */
+$messages['nds-nl'] = array(
+	'interlanguage-editlinks' => 'Verwiezingen bewarken',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
