@@ -181,6 +181,14 @@ $messages['el'] = array(
 	'interlanguage-editlinks' => 'Επεξεργασία συνδέσμων',
 );
 
+/** Esperanto (Esperanto)
+ * @author Tlustulimu
+ */
+$messages['eo'] = array(
+	'interlanguage-pagelinksexplanation' => 'Paĝoj kun lingvaj ligiloj:',
+	'interlanguage-editlinks' => 'Redaktu ligilojn',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  * @author Crazymadlover
