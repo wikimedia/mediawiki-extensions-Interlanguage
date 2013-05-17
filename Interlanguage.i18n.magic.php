@@ -87,7 +87,7 @@ $magicWords['ml'] = array(
 
 /** Marathi (मराठी) */
 $magicWords['mr'] = array(
-	'interlanguage' => array( 0, 'आंतरभाषीय', 'interlanguage' ),
+	'interlanguage' => array( 0, 'आंतरभाषीय' ),
 );
 
 /** Dutch (Nederlands) */
