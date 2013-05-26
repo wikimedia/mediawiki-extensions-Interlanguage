@@ -32,7 +32,7 @@ $magicWords['br'] = array(
 
 /** Chechen (нохчийн) */
 $magicWords['ce'] = array(
-	'interlanguage' => array( 0, 'меттиюкъ', 'межязык', 'interlanguage' ),
+	'interlanguage' => array( 0, 'меттиюкъ', 'межязык' ),
 );
 
 /** German (Deutsch) */
