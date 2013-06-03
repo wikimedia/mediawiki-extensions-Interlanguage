@@ -485,7 +485,7 @@ $messages['ms'] = array(
 	'interlanguage-editlinks' => 'Sunting pautan',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -510,7 +510,7 @@ $messages['nl'] = array(
 	'interlanguage-editlinks' => 'Koppelingen bewerken',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Harald Khan
  * @author Njardarlogar
  */
