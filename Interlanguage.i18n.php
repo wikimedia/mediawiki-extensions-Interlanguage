@@ -128,6 +128,13 @@ $messages['ca'] = array(
 	'interlanguage-desc' => "Recull interwikis d'una altra wiki",
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'interlanguage-editlinks' => 'Хьажоригаш нисяр',
+);
+
 /** Sorani Kurdish (کوردی)
  * @author Calak
  */
