@@ -476,6 +476,14 @@ $messages['ml'] = array(
 	'interlanguage-desc' => 'മറ്റൊരു വിക്കിയിൽ നിന്നും അന്തർഭാഷാ കണ്ണികൾ എടുക്കുക',
 );
 
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'interlanguage-pagelinksexplanation' => 'आंतरविकि दुवे असलेली पाने',
+	'interlanguage-editlinks' => 'दुवे संपादा',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
