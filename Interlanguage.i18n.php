@@ -731,7 +731,7 @@ $messages['tl'] = array(
  */
 $messages['tr'] = array(
 	'interlanguage-desc' => 'Başka bir vikiden dillerarası bağlantıları alır',
-	'interlanguage-pagelinksexplanation' => 'Dillerarası bağlantıları olan sayfalar:',
+	'interlanguage-pagelinksexplanation' => 'Diğer dillere bağlantıları olan sayfalar:',
 	'interlanguage-editlinks' => 'Bağlantıları düzenle',
 );
 
