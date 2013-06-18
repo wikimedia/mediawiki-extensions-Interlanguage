@@ -213,6 +213,7 @@ $messages['es'] = array(
  */
 $messages['eu'] = array(
 	'interlanguage-desc' => 'Beste wiki bateko hizkuntzen arteko loturak hartzen ditu',
+	'interlanguage-pagelinksexplanation' => 'Hizkuntzen arteko loturak dituzten orrialdeak:',
 	'interlanguage-editlinks' => 'Aldatu loturak',
 );
 
