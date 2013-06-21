@@ -625,6 +625,13 @@ $messages['sah'] = array(
 	'interlanguage-desc' => 'Атын тылларынан суруллубут биикилэртэн сигэлэри булар',
 );
 
+/** Sicilian (sicilianu)
+ * @author Gmelfi
+ */
+$messages['scn'] = array(
+	'interlanguage-editlinks' => 'Cancia li liami',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
