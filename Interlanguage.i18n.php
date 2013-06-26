@@ -449,8 +449,11 @@ $messages['lb'] = array(
 
 /** Lithuanian (lietuvių)
  * @author Eitvys200
+ * @author Hugo.arg
  */
 $messages['lt'] = array(
+	'interlanguage-desc' => 'Paima tarpkalbines nuorodas iš kitos wiki',
+	'interlanguage-pagelinksexplanation' => 'Puslapiai su tarpkalbinėmis nuorodomis:',
 	'interlanguage-editlinks' => 'Redaguoti nuorodas',
 );
 
