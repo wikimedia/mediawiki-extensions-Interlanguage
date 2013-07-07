@@ -537,6 +537,15 @@ $messages['oc'] = array(
 	'interlanguage-desc' => 'Permet de collectar los ligams interlengas d’un autre wiki',
 );
 
+/** Punjabi (ਪੰਜਾਬੀ)
+ * @author Babanwalia
+ */
+$messages['pa'] = array(
+	'interlanguage-desc' => 'ਹੋਰ ਵਿਕੀ ਤੋਂ ਅੰਤਰਭਾਸ਼ਾਈ ਕੜੀਆਂ ਲਓ',
+	'interlanguage-pagelinksexplanation' => 'ਅੰਤਰਭਾਸ਼ਾਈ ਕੜੀਆਂ ਵਾਲੇ ਸਫ਼ੇ:',
+	'interlanguage-editlinks' => 'ਕੜੀਆਂ ਸੋਧੋ',
+);
+
 /** Polish (polski)
  * @author Sp5uhe
  * @author Woytecr
