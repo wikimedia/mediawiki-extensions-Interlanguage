@@ -55,6 +55,11 @@ $magicWords['es'] = array(
 	'interlanguage' => array( 0, 'interidioma' ),
 );
 
+/** Persian (فارسی) */
+$magicWords['fa'] = array(
+	'interlanguage' => array( 0, 'میان‌زبانی' ),
+);
+
 /** Italian (italiano) */
 $magicWords['it'] = array(
 	'interlanguage' => array( 0, 'interlingua' ),
