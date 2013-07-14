@@ -60,6 +60,11 @@ $magicWords['fa'] = array(
 	'interlanguage' => array( 0, 'میان‌زبانی' ),
 );
 
+/** French (français) */
+$magicWords['fr'] = array(
+	'interlanguage' => array( 0, 'interlangue' ),
+);
+
 /** Italian (italiano) */
 $magicWords['it'] = array(
 	'interlanguage' => array( 0, 'interlingua' ),
