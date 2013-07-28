@@ -437,6 +437,15 @@ $messages['ku-latn'] = array(
 	'interlanguage-editlinks' => 'Girêdanan biguherîne',
 );
 
+/** Cornish (kernowek)
+ * @author Nrowe
+ */
+$messages['kw'] = array(
+	'interlanguage-desc' => 'Kavos a wra kevrennow ynteryeth dhyworth wiki aral',
+	'interlanguage-pagelinksexplanation' => 'Folennow ynna kevrennow ynteryeth:',
+	'interlanguage-editlinks' => 'Chanjya an kevrennow',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby
