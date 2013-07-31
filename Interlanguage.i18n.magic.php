@@ -65,6 +65,11 @@ $magicWords['fr'] = array(
 	'interlanguage' => array( 0, 'interlangue' ),
 );
 
+/** Indonesian (Bahasa Indonesia) */
+$magicWords['id'] = array(
+	'interlanguage' => array( 0, 'interwiki' ),
+);
+
 /** Italian (italiano) */
 $magicWords['it'] = array(
 	'interlanguage' => array( 0, 'interlingua' ),
@@ -83,6 +88,11 @@ $magicWords['ko'] = array(
 /** Ladino (Ladino) */
 $magicWords['lad'] = array(
 	'interlanguage' => array( 0, 'interlingua', 'interidioma', 'interlanguage' ),
+);
+
+/** Minangkabau (Baso Minangkabau) */
+$magicWords['min'] = array(
+	'interlanguage' => array( 0, 'interwiki' ),
 );
 
 /** Macedonian (македонски) */
