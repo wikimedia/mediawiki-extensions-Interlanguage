@@ -394,6 +394,14 @@ $messages['ka'] = array(
 	'interlanguage-editlinks' => 'ბმულების რედაქტირება',
 );
 
+/** Kazakh (Cyrillic script) (қазақша (кирил)‎)
+ * @author Arystanbek
+ */
+$messages['kk-cyrl'] = array(
+	'interlanguage-pagelinksexplanation' => 'Тіларалық сілтемелері бар беттер:',
+	'interlanguage-editlinks' => 'Сілтемелерді өңдеу',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author គីមស៊្រុន
  */
