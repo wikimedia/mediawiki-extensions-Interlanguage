@@ -132,7 +132,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
-	'interlanguage-editlinks' => 'Хьажоригаш нисяр',
+	'interlanguage-editlinks' => 'Хьажорагаш нисъяр',
 );
 
 /** Sorani Kurdish (کوردی)
