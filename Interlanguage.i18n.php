@@ -827,10 +827,11 @@ $messages['yi'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Hydra
  * @author Linforest
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
-	'interlanguage-desc' => '抓住从另一个维基语链接',
-	'interlanguage-pagelinksexplanation' => '中介语的链接的页：',
+	'interlanguage-desc' => '从其他wiki抓取跨语言链接',
+	'interlanguage-pagelinksexplanation' => '有跨语言链接的页面：',
 	'interlanguage-editlinks' => '编辑链接',
 );
 
