@@ -137,5 +137,5 @@ $magicWords['uk'] = array(
 
 /** Vietnamese (Tiếng Việt) */
 $magicWords['vi'] = array(
-	'interlanguage' => array( 0, 'liênngônngữ' ),
+	'interlanguage' => array( 0, 'liên_ngôn_ngữ', 'liênngônngữ' ),
 );
