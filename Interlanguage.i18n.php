@@ -457,9 +457,10 @@ $messages['kw'] = array(
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
-	'interlanguage-desc' => "Erlaabt et d'Linken tëschent Sproochen vun enger anerer Wiki z'iwwerhuelen",
+	'interlanguage-desc' => "Erlaabt et d'Linken tëscht Sproochen vu enger anerer Wiki z'iwwerhuelen",
 	'interlanguage-pagelinksexplanation' => 'Säite mat Linke mat anere Sproochen:',
 	'interlanguage-editlinks' => 'Linken änneren',
 );
