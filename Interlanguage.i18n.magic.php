@@ -139,3 +139,8 @@ $magicWords['uk'] = array(
 $magicWords['vi'] = array(
 	'interlanguage' => array( 0, 'liên_ngôn_ngữ', 'liênngônngữ' ),
 );
+
+/** Simplified Chinese (中文（简体）‎) */
+$magicWords['zh-hans'] = array(
+	'interlanguage' => array( 0, '跨语言' ),
+);
