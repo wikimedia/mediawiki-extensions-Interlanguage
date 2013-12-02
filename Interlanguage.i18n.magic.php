@@ -22,7 +22,7 @@ $magicWords['ar'] = array(
 
 /** Egyptian Spoken Arabic (مصرى) */
 $magicWords['arz'] = array(
-	'interlanguage' => array( 0, 'بين_اللغات', 'interlanguage' ),
+	'interlanguage' => array( 0, 'بين_اللغات' ),
 );
 
 /** Breton (brezhoneg) */
