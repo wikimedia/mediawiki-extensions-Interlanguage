@@ -142,7 +142,7 @@ $messages['ckb'] = array(
 	'interlanguage-editlinks' => 'بەستەرەکان دەستکاری بکە',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Chmee2
  */
 $messages['cs'] = array(
