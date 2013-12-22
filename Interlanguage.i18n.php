@@ -662,6 +662,13 @@ $messages['scn'] = array(
 	'interlanguage-editlinks' => 'Cancia li liami',
 );
 
+/** Sassaresu (Sassaresu)
+ * @author Jun Misugi
+ */
+$messages['sdc'] = array(
+	'interlanguage-editlinks' => 'Mudifiggà liadduri',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
