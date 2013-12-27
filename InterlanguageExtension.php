@@ -149,8 +149,17 @@ class InterlanguageExtension {
 			if( isset( $a['missing'] ) ) {
 				// There is no such article on the central wiki, so we will display a broken link
 				// to the article on the central wiki
-				$linker = new Linker();
-				$res=array( $linker->makeBrokenLink( $wgInterlanguageExtensionInterwiki . $this->translateNamespace( $param ), $wgInterlanguageExtensionInterwiki . $param ), 'noparse' => true, 'isHTML' => true);
+				$res = array(
+					Linker::link(
+						Title::newFromText( $wgInterlanguageExtensionInterwiki . $this->translateNamespace( $param ) ),
+						$wgInterlanguageExtensionInterwiki . $param,
+						array(),
+						array(),
+						array( 'broken' )
+					),
+					'noparse' => true,
+					'isHTML' => true
+				);
 			} else {
 				if( isset( $a['langlinks'] ) ) {
 					// Prepare the array for sorting
