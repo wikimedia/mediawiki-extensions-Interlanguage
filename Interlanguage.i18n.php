@@ -249,6 +249,13 @@ $messages['frp'] = array(
 	'interlanguage-editlinks' => 'Changiér los lims',
 );
 
+/** Scottish Gaelic (Gàidhlig)
+ * @author Akerbeltz
+ */
+$messages['gd'] = array(
+	'interlanguage-editlinks' => 'Deasaich na ceanglaichean',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
