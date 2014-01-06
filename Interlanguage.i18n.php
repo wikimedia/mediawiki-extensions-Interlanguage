@@ -149,6 +149,15 @@ $messages['cs'] = array(
 	'interlanguage-editlinks' => 'Upravit odkaz',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'interlanguage-desc' => 'Yn nôl cysylltau rhyngieithol o wici arall',
+	'interlanguage-pagelinksexplanation' => 'Tudalennau gyda chysylltau rhyngieithol arnynt:',
+	'interlanguage-editlinks' => "Golygu'r cysylltau",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Les Meloures
