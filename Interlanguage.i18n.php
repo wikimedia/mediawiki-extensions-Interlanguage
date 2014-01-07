@@ -226,6 +226,15 @@ $messages['eu'] = array(
 	'interlanguage-editlinks' => 'Aldatu loturak',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'interlanguage-desc' => 'ربودن لینک‌های میان زبانی از ویکی دیگری',
+	'interlanguage-pagelinksexplanation' => 'صفحات با لینک‌های میان زبانی:',
+	'interlanguage-editlinks' => 'ویرایش لینک‌ها',
+);
+
 /** Finnish (suomi)
  * @author Beluga
  * @author Centerlink
