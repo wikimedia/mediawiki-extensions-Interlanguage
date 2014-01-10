@@ -230,7 +230,6 @@ class InterlanguageExtension {
 		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
 
 		if( count( $pagelinktitles ) ) {
-			$linker = new Linker();
 			$ple = wfMsg( 'interlanguage-pagelinksexplanation' );
 
 			$res = <<<THEEND
@@ -239,7 +238,7 @@ class InterlanguageExtension {
 <ul>
 THEEND;
 			foreach($pagelinktitles as $title) {
-				$link = $linker->link( $title,$title->getText(), array(), array( 'action' => 'edit' ) );
+				$link = Linker::link( $title,$title->getText(), array(), array( 'action' => 'edit' ) );
 				$res .= "<li>$link</li>\n";
 			}
 			$res .= <<<THEEND
