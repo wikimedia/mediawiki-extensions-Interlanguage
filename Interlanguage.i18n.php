@@ -142,6 +142,13 @@ $messages['ckb'] = array(
 	'interlanguage-editlinks' => 'بەستەرەکان دەستکاری بکە',
 );
 
+/** Corsican (corsu)
+ * @author Paulu
+ */
+$messages['co'] = array(
+	'interlanguage-editlinks' => 'Mudificà ligame',
+);
+
 /** Czech (čeština)
  * @author Chmee2
  */
