@@ -135,6 +135,11 @@ $magicWords['uk'] = array(
 	'interlanguage' => array( 0, 'міжмова' ),
 );
 
+/** Urdu (اردو) */
+$magicWords['ur'] = array(
+	'interlanguage' => array( 0, 'بین_اللسانی' ),
+);
+
 /** Vietnamese (Tiếng Việt) */
 $magicWords['vi'] = array(
 	'interlanguage' => array( 0, 'liên_ngôn_ngữ', 'liênngônngữ' ),
