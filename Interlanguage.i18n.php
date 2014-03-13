@@ -812,6 +812,13 @@ $messages['tr'] = array(
 	'interlanguage-editlinks' => 'Bağlantıları düzenle',
 );
 
+/** Tatar (Cyrillic script) (татарча)
+ * @author Ilnur efende
+ */
+$messages['tt-cyrl'] = array(
+	'interlanguage-editlinks' => 'Сылтамалар өстәү',
+);
+
 /** Ukrainian (українська)
  * @author Prima klasy4na
  * @author Тест
