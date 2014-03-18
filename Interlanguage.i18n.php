@@ -121,6 +121,13 @@ $messages['bs'] = array(
 	'interlanguage-editlinks' => 'Uredi linkove',
 );
 
+/** буряад (буряад)
+ * @author Elvonudinium
+ */
+$messages['bxr'] = array(
+	'interlanguage-editlinks' => 'Холбооһые заһабарилха',
+);
+
 /** Catalan (català)
  * @author Paucabot
  */
