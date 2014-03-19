@@ -242,11 +242,12 @@ $messages['eu'] = array(
 
 /** Persian (فارسی)
  * @author Armin1392
+ * @author Ebraminio
  */
 $messages['fa'] = array(
 	'interlanguage-desc' => 'ربودن لینک‌های میان زبانی از ویکی دیگری',
 	'interlanguage-pagelinksexplanation' => 'صفحات با لینک‌های میان زبانی:',
-	'interlanguage-editlinks' => 'ویرایش لینک‌ها',
+	'interlanguage-editlinks' => 'ویرایش پیوندها',
 );
 
 /** Finnish (suomi)
