@@ -222,11 +222,12 @@ $messages['eo'] = array(
 /** Spanish (español)
  * @author Armando-Martin
  * @author Crazymadlover
+ * @author Fitoschido
  * @author Translationista
  */
 $messages['es'] = array(
 	'interlanguage-desc' => 'Coge vínculos interidiomáticos de otro wiki',
-	'interlanguage-pagelinksexplanation' => 'Páginas con enlaces interidioma:',
+	'interlanguage-pagelinksexplanation' => 'Páginas con enlaces interlingüísticos:',
 	'interlanguage-editlinks' => 'Editar los enlaces',
 );
 
