@@ -246,8 +246,8 @@ $messages['eu'] = array(
  * @author Ebraminio
  */
 $messages['fa'] = array(
-	'interlanguage-desc' => 'ربودن لینک‌های میان زبانی از ویکی دیگری',
-	'interlanguage-pagelinksexplanation' => 'صفحات با لینک‌های میان زبانی:',
+	'interlanguage-desc' => 'ربودن پیوندهای میان‌زبانی از ویکی دیگری',
+	'interlanguage-pagelinksexplanation' => 'صفحات با پیوندهای میان زبانی:',
 	'interlanguage-editlinks' => 'ویرایش پیوندها',
 );
 
