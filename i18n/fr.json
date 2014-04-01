@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "IAlex",
+            "Peter17",
+            "Verdy p"
+        ]
+    },
+    "interlanguage-desc": "Permet de collecter les liens interlangues d’un autre wiki",
+    "interlanguage-pagelinksexplanation": "Pages avec des liens inter-langues :",
+    "interlanguage-editlinks": "Modifier les liens"
+}

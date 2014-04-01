@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "CERminator"
+        ]
+    },
+    "interlanguage-desc": "Preuzima međujezičke linkove sa druge wiki",
+    "interlanguage-pagelinksexplanation": "Stranice sa interwiki linkovima:",
+    "interlanguage-editlinks": "Uredi linkove"
+}

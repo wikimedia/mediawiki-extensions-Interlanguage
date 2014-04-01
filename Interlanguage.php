@@ -3,7 +3,6 @@
  * MediaWiki Interlanguage extension
  *
  * Copyright © 2008-2011 Nikola Smolenski <smolensk@eunet.rs> and others
- * @version 1.5
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,9 +33,11 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage',
 	'author'			=> 'Nikola Smolenski',
 	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.5',
+	'version'			=> '1.6.0',
 	'descriptionmsg'	=> 'interlanguage-desc',
 );
+
+$wgMessagesDirs['Interlanguage'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Interlanguage'] = dirname(__FILE__) . '/Interlanguage.i18n.php';
 $wgExtensionMessagesFiles['InterlanguageMagic'] = dirname(__FILE__) . '/Interlanguage.i18n.magic.php';
 $wgAutoloadClasses['InterlanguageExtension'] = dirname(__FILE__) . '/InterlanguageExtension.php';

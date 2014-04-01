@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Hydra",
+            "Linforest",
+            "Xiaomingyan"
+        ]
+    },
+    "interlanguage-desc": "从其他wiki抓取跨语言链接",
+    "interlanguage-pagelinksexplanation": "有跨语言链接的页面：",
+    "interlanguage-editlinks": "编辑链接"
+}
