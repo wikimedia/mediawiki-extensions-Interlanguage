@@ -30,9 +30,11 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'			=> 'Interlanguage Central',
 	'author'			=> 'Nikola Smolenski',
 	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.3',
+	'version'			=> '1.4.0',
 	'descriptionmsg'	=> 'interlanguagecentral-desc',
 );
+
+$wgMessagesDirs['InterlanguageCentral'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['InterlanguageCentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
 $wgExtensionMessagesFiles['InterlanguageCentralMagic'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.magic.php';
 $wgAutoloadClasses['InterlanguageCentralExtensionPurgeJob'] = dirname(__FILE__) .  '/InterlanguageCentralExtensionPurgeJob.php';
