@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "interlanguage-desc": "Zběra mjazyrěcne wótkaze z drugego wikija",
-    "interlanguage-pagelinksexplanation": "Boki z wótkazami mjazy rozdźělnymi rěcami",
-    "interlanguage-editlinks": "Wótkaze wobźěłaś"
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"interlanguage-desc": "Zběra mjazyrěcne wótkaze z drugego wikija",
+	"interlanguage-pagelinksexplanation": "Boki z wótkazami mjazy rozdźělnymi rěcami",
+	"interlanguage-editlinks": "Wótkaze wobźěłaś"
 }

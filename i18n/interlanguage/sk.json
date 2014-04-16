@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Helix84"
-        ]
-    },
-    "interlanguage-desc": "Získa medzijazykové odkazy z inej wiki",
-    "interlanguage-pagelinksexplanation": "Stránky s jazykovými odkazmi:",
-    "interlanguage-editlinks": "Upraviť odkazy"
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"interlanguage-desc": "Získa medzijazykové odkazy z inej wiki",
+	"interlanguage-pagelinksexplanation": "Stránky s jazykovými odkazmi:",
+	"interlanguage-editlinks": "Upraviť odkazy"
 }

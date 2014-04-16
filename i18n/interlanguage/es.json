@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Armando-Martin",
-            "Crazymadlover",
-            "Fitoschido",
-            "Translationista"
-        ]
-    },
-    "interlanguage-desc": "Coge vínculos interidiomáticos de otro wiki",
-    "interlanguage-pagelinksexplanation": "Páginas con enlaces interlingüísticos:",
-    "interlanguage-editlinks": "Editar los enlaces"
+	"@metadata": {
+		"authors": [
+			"Armando-Martin",
+			"Crazymadlover",
+			"Fitoschido",
+			"Translationista"
+		]
+	},
+	"interlanguage-desc": "Coge vínculos interidiomáticos de otro wiki",
+	"interlanguage-pagelinksexplanation": "Páginas con enlaces interlingüísticos:",
+	"interlanguage-editlinks": "Editar los enlaces"
 }

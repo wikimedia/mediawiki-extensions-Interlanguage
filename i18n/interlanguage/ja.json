@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Aotake",
-            "Schu",
-            "Shirayuki",
-            "青子守歌"
-        ]
-    },
-    "interlanguage-desc": "言語間リンクを他のウィキから取得する",
-    "interlanguage-pagelinksexplanation": "言語間リンクがあるページ:",
-    "interlanguage-editlinks": "リンクの編集"
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Schu",
+			"Shirayuki",
+			"青子守歌"
+		]
+	},
+	"interlanguage-desc": "言語間リンクを他のウィキから取得する",
+	"interlanguage-pagelinksexplanation": "言語間リンクがあるページ:",
+	"interlanguage-editlinks": "リンクの編集"
 }

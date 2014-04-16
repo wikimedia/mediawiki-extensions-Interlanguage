@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Giro720",
-            "Hamilton Abreu"
-        ]
-    },
-    "interlanguage-desc": "Extrai os links interlínguas de outra wiki",
-    "interlanguage-pagelinksexplanation": "Páginas com links interlínguas:",
-    "interlanguage-editlinks": "Editar Links"
+	"@metadata": {
+		"authors": [
+			"Giro720",
+			"Hamilton Abreu"
+		]
+	},
+	"interlanguage-desc": "Extrai os links interlínguas de outra wiki",
+	"interlanguage-pagelinksexplanation": "Páginas com links interlínguas:",
+	"interlanguage-editlinks": "Editar Links"
 }

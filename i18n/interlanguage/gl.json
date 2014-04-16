@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Toliño"
-        ]
-    },
-    "interlanguage-desc": "Permite a obtención de ligazóns interlingüísticas desde outro wiki",
-    "interlanguage-pagelinksexplanation": "Páxinas con ligazóns interlingüísticas:",
-    "interlanguage-editlinks": "Editar as ligazóns"
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"interlanguage-desc": "Permite a obtención de ligazóns interlingüísticas desde outro wiki",
+	"interlanguage-pagelinksexplanation": "Páxinas con ligazóns interlingüísticas:",
+	"interlanguage-editlinks": "Editar as ligazóns"
 }

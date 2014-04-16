@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Snævar"
-        ]
-    },
-    "interlanguage-desc": "Sækir tungumálatengla frá öðrum wiki",
-    "interlanguage-pagelinksexplanation": "Síður með tungumálatengla:",
-    "interlanguage-editlinks": "Breyta tenglum"
+	"@metadata": {
+		"authors": [
+			"Snævar"
+		]
+	},
+	"interlanguage-desc": "Sækir tungumálatengla frá öðrum wiki",
+	"interlanguage-pagelinksexplanation": "Síður með tungumálatengla:",
+	"interlanguage-editlinks": "Breyta tenglum"
 }

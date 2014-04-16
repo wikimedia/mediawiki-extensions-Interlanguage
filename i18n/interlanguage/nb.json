@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Nghtwlkr"
-        ]
-    },
-    "interlanguage-desc": "Henter språklenker fra andre wikier",
-    "interlanguage-pagelinksexplanation": "Sider med språklenker:",
-    "interlanguage-editlinks": "Rediger lenker"
+	"@metadata": {
+		"authors": [
+			"Nghtwlkr"
+		]
+	},
+	"interlanguage-desc": "Henter språklenker fra andre wikier",
+	"interlanguage-pagelinksexplanation": "Sider med språklenker:",
+	"interlanguage-editlinks": "Rediger lenker"
 }

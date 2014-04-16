@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kghbln",
-            "Les Meloures",
-            "Marcel083",
-            "Metalhead64",
-            "PasO"
-        ]
-    },
-    "interlanguage-desc": "Ermöglicht den Abruf von Links zu verbundenen Wikis in anderen Sprachen",
-    "interlanguage-pagelinksexplanation": "Seiten mit Links zu verbundenen Wikis in anderen Sprachen",
-    "interlanguage-editlinks": "Links bearbeiten"
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Les Meloures",
+			"Marcel083",
+			"Metalhead64",
+			"PasO"
+		]
+	},
+	"interlanguage-desc": "Ermöglicht den Abruf von Links zu verbundenen Wikis in anderen Sprachen",
+	"interlanguage-pagelinksexplanation": "Seiten mit Links zu verbundenen Wikis in anderen Sprachen",
+	"interlanguage-editlinks": "Links bearbeiten"
 }

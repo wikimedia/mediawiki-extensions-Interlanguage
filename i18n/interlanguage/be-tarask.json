@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Jim-by",
-            "Wizardist"
-        ]
-    },
-    "interlanguage-desc": "Захоплівае міжмоўныя спасылкі зь іншай вікі",
-    "interlanguage-pagelinksexplanation": "Старонкі са спасылкамі на іншыя моўныя вэрсіі:",
-    "interlanguage-editlinks": "Рэдагаваць спасылкі"
+	"@metadata": {
+		"authors": [
+			"Jim-by",
+			"Wizardist"
+		]
+	},
+	"interlanguage-desc": "Захоплівае міжмоўныя спасылкі зь іншай вікі",
+	"interlanguage-pagelinksexplanation": "Старонкі са спасылкамі на іншыя моўныя вэрсіі:",
+	"interlanguage-editlinks": "Рэдагаваць спасылкі"
 }

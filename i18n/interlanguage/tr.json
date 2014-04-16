@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Emperyan",
-            "Joseph"
-        ]
-    },
-    "interlanguage-desc": "Başka bir vikiden dillerarası bağlantıları alır",
-    "interlanguage-pagelinksexplanation": "Diğer dillere bağlantıları olan sayfalar:",
-    "interlanguage-editlinks": "Bağlantıları düzenle"
+	"@metadata": {
+		"authors": [
+			"Emperyan",
+			"Joseph"
+		]
+	},
+	"interlanguage-desc": "Başka bir vikiden dillerarası bağlantıları alır",
+	"interlanguage-pagelinksexplanation": "Diğer dillere bağlantıları olan sayfalar:",
+	"interlanguage-editlinks": "Bağlantıları düzenle"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Amire80",
-            "Rotemliss",
-            "YaronSh"
-        ]
-    },
-    "interlanguage-desc": "קבלת קישורים בין־לשוניים (\"בינוויקי\") מאתר ויקי אחר",
-    "interlanguage-pagelinksexplanation": "דפים עם קישורים בין־לשוניים:",
-    "interlanguage-editlinks": "עריכת קישורים"
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Rotemliss",
+			"YaronSh"
+		]
+	},
+	"interlanguage-desc": "קבלת קישורים בין־לשוניים (\"בינוויקי\") מאתר ויקי אחר",
+	"interlanguage-pagelinksexplanation": "דפים עם קישורים בין־לשוניים:",
+	"interlanguage-editlinks": "עריכת קישורים"
 }

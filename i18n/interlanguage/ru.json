@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "MaxSem",
-            "Prima klasy4na",
-            "Александр Сигачёв"
-        ]
-    },
-    "interlanguage-desc": "Захватывает межъязыковые ссылки из другой вики",
-    "interlanguage-pagelinksexplanation": "Страницы с межъязыковыми ссылками:",
-    "interlanguage-editlinks": "Править ссылки"
+	"@metadata": {
+		"authors": [
+			"MaxSem",
+			"Prima klasy4na",
+			"Александр Сигачёв"
+		]
+	},
+	"interlanguage-desc": "Захватывает межъязыковые ссылки из другой вики",
+	"interlanguage-pagelinksexplanation": "Страницы с межъязыковыми ссылками:",
+	"interlanguage-editlinks": "Править ссылки"
 }

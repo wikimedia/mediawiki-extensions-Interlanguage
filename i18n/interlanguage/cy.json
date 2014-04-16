@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lloffiwr"
-        ]
-    },
-    "interlanguage-desc": "Yn nôl cysylltau rhyngieithol o wici arall",
-    "interlanguage-pagelinksexplanation": "Tudalennau gyda chysylltau rhyngieithol arnynt:",
-    "interlanguage-editlinks": "Golygu'r cysylltau"
+	"@metadata": {
+		"authors": [
+			"Lloffiwr"
+		]
+	},
+	"interlanguage-desc": "Yn nôl cysylltau rhyngieithol o wici arall",
+	"interlanguage-pagelinksexplanation": "Tudalennau gyda chysylltau rhyngieithol arnynt:",
+	"interlanguage-editlinks": "Golygu'r cysylltau"
 }

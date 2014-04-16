@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Beluga",
-            "Centerlink",
-            "Crt",
-            "Nike"
-        ]
-    },
-    "interlanguage-desc": "Ottaa kieltenväliset linkit toisesta wikistä.",
-    "interlanguage-pagelinksexplanation": "Sivut, joilla on kieltenvälisiä linkkejä:",
-    "interlanguage-editlinks": "Muokkaa linkkejä"
+	"@metadata": {
+		"authors": [
+			"Beluga",
+			"Centerlink",
+			"Crt",
+			"Nike"
+		]
+	},
+	"interlanguage-desc": "Ottaa kieltenväliset linkit toisesta wikistä.",
+	"interlanguage-pagelinksexplanation": "Sivut, joilla on kieltenvälisiä linkkejä:",
+	"interlanguage-editlinks": "Muokkaa linkkejä"
 }
