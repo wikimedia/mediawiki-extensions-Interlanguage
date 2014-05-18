@@ -149,3 +149,8 @@ $magicWords['vi'] = array(
 $magicWords['zh-hans'] = array(
 	'interlanguage' => array( 0, '跨语言' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$magicWords['zh-hant'] = array(
+	'interlanguage' => array( 0, '跨語言' ),
+);
