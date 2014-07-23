@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Simon Shek"
+			"Simon Shek",
+			"LNDDYL"
 		]
 	},
 	"interlanguage-desc": "抓住從另一個維基語鏈接",
-	"interlanguage-pagelinksexplanation": "中介語的鏈接的頁：",
+	"interlanguage-pagelinksexplanation": "中介語的連結的頁面：",
 	"interlanguage-editlinks": "編輯連結"
 }
