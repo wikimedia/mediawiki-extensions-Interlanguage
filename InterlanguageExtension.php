@@ -28,7 +28,7 @@ class InterlanguageExtension {
 	/**
 	 * @var DatabaseBase
 	 */
-	var $foreignDbr = false;
+	public $foreignDbr = false;
 
 	/**
 	 * The meat of the extension, the function that handles {{interlanguage:}} magic.

@@ -26,7 +26,7 @@
 
 class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
-	var $oldILL = array();
+	public $oldILL = array();
 
 	function languagelink( &$parser, $lang, $title = "" ) {
 		if( strlen( $lang ) && strlen( $title ) ) {
