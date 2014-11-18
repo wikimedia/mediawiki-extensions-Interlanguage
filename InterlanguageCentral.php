@@ -51,7 +51,7 @@ function wfInterlanguageCentralExtension( $parser ) {
 	if( !isset( $wgInterlanguageCentralExtension ) ) {
 		$wgInterlanguageCentralExtension = new InterlanguageCentralExtension();
 		$wgHooks['LinksUpdate'][] = $wgInterlanguageCentralExtension;
-		$parser->setFunctionHook( 'languagelink', array( $wgInterlanguageCentralExtension, 'languagelink' ), SFH_NO_HASH );
+		$parser->setFunctionHook( 'languagelink', array( $wgInterlanguageCentralExtension, 'languagelink' ), Parser::SFH_NO_HASH );
 	}
 	return true;
 }
