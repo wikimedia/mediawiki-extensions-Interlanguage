@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tlustulimu"
+			"Tlustulimu",
+			"KuboF"
 		]
 	},
+	"interlanguage-desc": "Preni interlingvajn ligilojn de alia vikio",
 	"interlanguage-pagelinksexplanation": "Paĝoj kun lingvaj ligiloj:",
 	"interlanguage-editlinks": "Redaktu ligilojn"
 }
