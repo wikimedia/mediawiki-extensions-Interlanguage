@@ -65,6 +65,11 @@ $magicWords['fr'] = array(
 	'interlanguage' => array( 0, 'interlangue' ),
 );
 
+/** Western Frisian (Frysk) */
+$magicWords['fy'] = array(
+	'interlanguage' => array( 0, 'yntertaal' ),
+);
+
 /** Indonesian (Bahasa Indonesia) */
 $magicWords['id'] = array(
 	'interlanguage' => array( 0, 'interwiki' ),
