@@ -20,7 +20,7 @@ $magicWords['ar'] = array(
 	'interlanguage' => array( 0, 'بين_اللغات' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $magicWords['arz'] = array(
 	'interlanguage' => array( 0, 'بين_اللغات' ),
 );
