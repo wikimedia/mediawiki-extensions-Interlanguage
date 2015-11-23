@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"An13sa",
-			"Theklan"
+			"Theklan",
+			"Xabier Armendaritz"
 		]
 	},
 	"interlanguage-desc": "Beste wiki bateko hizkuntzen arteko loturak hartzen ditu",
-	"interlanguage-pagelinksexplanation": "Hizkuntzen arteko loturak dituzten orrialdeak:",
+	"interlanguage-pagelinksexplanation": "Hizkuntzen arteko loturak dituzten orriak:",
 	"interlanguage-editlinks": "Aldatu loturak"
 }
