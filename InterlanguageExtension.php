@@ -261,7 +261,7 @@ THEEND;
 		$paramTitle = Title::newFromText( $param );
 		if( $paramTitle ) {
 			$dbKey = $paramTitle->mDbkeyform;
-			$namespace = $paramTitle->mNamespace;
+			$namespace = $paramTitle->getNamespace();
 		} else {
 			//If the title is malformed, try at least this
 			$dbKey = strtr( $param, ' ', '_' );
