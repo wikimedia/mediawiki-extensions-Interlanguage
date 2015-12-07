@@ -260,7 +260,7 @@ THEEND;
 	function getKeyNS( $param ) {
 		$paramTitle = Title::newFromText( $param );
 		if( $paramTitle ) {
-			$dbKey = $paramTitle->mDbkeyform;
+			$dbKey = $paramTitle->getDBkey();
 			$namespace = $paramTitle->getNamespace();
 		} else {
 			//If the title is malformed, try at least this
