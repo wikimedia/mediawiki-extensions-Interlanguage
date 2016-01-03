@@ -230,7 +230,7 @@ class InterlanguageExtension {
 		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
 
 		if( count( $pagelinktitles ) ) {
-			$ple = wfMsg( 'interlanguage-pagelinksexplanation' );
+			$ple = wfMessage( 'interlanguage-pagelinksexplanation' )->escaped();
 
 			$res = <<<THEEND
 <div class='interlanguageExtensionEditLinks'>
@@ -298,7 +298,7 @@ THEEND;
 		foreach( $pagelinktitles as $title ) {
 			$template->data['language_urls'][] = array(
 				'href' => $title->getFullURL( array( 'action' => 'edit' ) ),
-				'text' => wfMsg( 'interlanguage-editlinks' ),
+				'text' => wfMessage( 'interlanguage-editlinks' )->text(),
 				'title' => $title->getText(),
 				'class' => "interwiki-interlanguage",
 			);
