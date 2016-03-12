@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wikitanvir"
+			"Wikitanvir",
+			"Bodhisattwa"
 		]
 	},
+	"interlanguage-pagelinksexplanation": "আন্তঃভাষা সংযোগসহ পাতাসমূহ",
 	"interlanguage-editlinks": "সংযোগ সম্পাদনা"
 }
