@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Wikitanvir",
-			"Bodhisattwa"
+			"Bodhisattwa",
+			"আজিজ"
 		]
 	},
+	"interlanguage-desc": "অন্য একটি উইকিতে থেকে আন্তঃভাষা সংযোগগুলি দখল করুন",
 	"interlanguage-pagelinksexplanation": "আন্তঃভাষা সংযোগসহ পাতাসমূহ",
 	"interlanguage-editlinks": "সংযোগ সম্পাদনা"
 }
