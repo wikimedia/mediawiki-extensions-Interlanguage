@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ilnur efende"
+			"Ilnur efende",
+			"Ильнар"
 		]
 	},
+	"interlanguage-desc": "Башка викилардан телара сылтамаларны ала",
+	"interlanguage-pagelinksexplanation": "Телара сылтамалы битләр:",
 	"interlanguage-editlinks": "Сылтамалар өстәү"
 }
