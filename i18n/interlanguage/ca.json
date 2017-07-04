@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Paucabot"
+			"Paucabot",
+			"Ssola"
 		]
 	},
-	"interlanguage-desc": "Recull interwikis d'una altra wiki"
+	"interlanguage-desc": "Recull interwikis d'una altra wiki",
+	"interlanguage-pagelinksexplanation": "Pàgines amb enllaços interwikis:",
+	"interlanguage-editlinks": "Modifica els enllaços"
 }
