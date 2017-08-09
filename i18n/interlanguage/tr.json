@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Emperyan",
-			"Joseph"
+			"Joseph",
+			"Rapsar"
 		]
 	},
 	"interlanguage-desc": "Başka bir vikiden dillerarası bağlantıları alır",
 	"interlanguage-pagelinksexplanation": "Diğer dillere bağlantıları olan sayfalar:",
-	"interlanguage-editlinks": "Bağlantıları düzenle"
+	"interlanguage-editlinks": "Bağlantıları değiştir"
 }
