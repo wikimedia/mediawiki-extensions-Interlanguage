@@ -3,10 +3,11 @@
 		"authors": [
 			"Emperyan",
 			"Joseph",
-			"Rapsar"
+			"Rapsar",
+			"Vito Genovese"
 		]
 	},
 	"interlanguage-desc": "Başka bir vikiden dillerarası bağlantıları alır",
 	"interlanguage-pagelinksexplanation": "Diğer dillere bağlantıları olan sayfalar:",
-	"interlanguage-editlinks": "Bağlantıları değiştir"
+	"interlanguage-editlinks": "Bağlantıları düzenle"
 }
