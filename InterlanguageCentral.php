@@ -35,7 +35,6 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $wgMessagesDirs['InterlanguageCentral'] = __DIR__ . '/i18n/central';
-$wgExtensionMessagesFiles['InterlanguageCentral'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.php';
 $wgExtensionMessagesFiles['InterlanguageCentralMagic'] = dirname(__FILE__) . '/InterlanguageCentral.i18n.magic.php';
 $wgAutoloadClasses['InterlanguageCentralExtensionPurgeJob'] = dirname(__FILE__) .  '/InterlanguageCentralExtensionPurgeJob.php';
 $wgAutoloadClasses['InterlanguageCentralExtension'] = dirname(__FILE__) . '/InterlanguageCentralExtension.php';
