@@ -26,7 +26,7 @@
 
 class InterlanguageExtension {
 	/**
-	 * @var DatabaseBase
+	 * @var \Wikimedia\Rdbms\IDatabase
 	 */
 	public $foreignDbr = false;
 
@@ -363,7 +363,7 @@ THEEND;
 	 * Read interlanguage links from a database, and return them in the same format that API
 	 * uses.
 	 *
-	 * @param	$dbr DatabaseBase
+	 * @param	$dbr \Wikimedia\Rdbms\IDatabase
 	 * @param	$articleid int ID of the article whose links should be returned.
 	 * @return	The array with the links. If there are no links, an empty array is returned.
 	 */
