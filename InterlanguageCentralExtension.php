@@ -61,7 +61,7 @@ class InterlanguageCentralExtension {
 		) {
 			$ill = array_merge_recursive($oldILL, $newILL);
 			$job = new InterlanguageCentralExtensionPurgeJob( $linksUpdate->mTitle, array('ill' => $ill) );
-			$job->insert();
+			JobQueueGroup::singleton()->push( $job );
 		}
 
 		return true;
