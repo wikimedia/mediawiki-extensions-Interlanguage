@@ -21,10 +21,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  *
  * For more information,
- * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
+ * @see https://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
-//Based on http://www.mediawiki.org/wiki/Manual:Job_queue/For_developers
+// Based on https://www.mediawiki.org/wiki/Manual:Job_queue/For_developers
 class InterlanguageCentralExtensionPurgeJob extends Job {
 	public function __construct( $title, $params ) {
 		parent::__construct( 'purgeDependentWikis', $title, $params );

@@ -19,7 +19,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  *
  * For more information,
- * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
+ * @see https://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
 $wgInterlanguageExtensionDB = false;
@@ -31,9 +31,9 @@ $wgInterlanguageExtensionSortPrepend = false;
 $wgExtensionCredits['parserhook'][] = array(
 	'path'			=> __FILE__,
 	'name'			=> 'Interlanguage',
-	'author'			=> 'Nikola Smolenski',
-	'url'				=> 'http://www.mediawiki.org/wiki/Extension:Interlanguage',
-	'version'			=> '1.6.1',
+	'author'		=> 'Nikola Smolenski',
+	'url'			=> 'https://www.mediawiki.org/wiki/Extension:Interlanguage',
+	'version'		=> '1.6.1',
 	'descriptionmsg'	=> 'interlanguage-desc',
 );
 

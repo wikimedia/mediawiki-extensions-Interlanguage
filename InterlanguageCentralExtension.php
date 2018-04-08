@@ -21,7 +21,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  *
  * For more information,
- * @see http://www.mediawiki.org/wiki/Extension:Interlanguage
+ * @see https://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
 class InterlanguageCentralExtension {
