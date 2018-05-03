@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Meno25"
+			"Meno25",
+			"ديفيد"
 		]
 	},
-	"interlanguage-desc": "يجلب الوصلات بين اللغات من ويكي آخر"
+	"interlanguage-desc": "يجلب الوصلات بين اللغات من ويكي آخر",
+	"interlanguage-pagelinksexplanation": "صفحات بوصلات بين اللغات:",
+	"interlanguage-editlinks": "عدل الوصلات"
 }
