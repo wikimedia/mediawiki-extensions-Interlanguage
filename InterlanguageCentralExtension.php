@@ -37,7 +37,7 @@ class InterlanguageCentralExtension {
 	}
 
 	function onLinksUpdate( &$linksUpdate ) {
-		$oldILL = $this->getILL( DB_SLAVE, $linksUpdate->mTitle);
+		$oldILL = $this->getILL( DB_REPLICA, $linksUpdate->mTitle);
 		$newILL = $linksUpdate->mInterlangs;
 
 		//Convert $newILL to the same format as $oldILL

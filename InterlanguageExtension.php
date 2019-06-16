@@ -78,7 +78,7 @@ class InterlanguageExtension {
 		global $wgInterlanguageExtensionDB;
 
 		if( !$this->foreignDbr ) {
-			$this->foreignDbr = wfGetDB( DB_SLAVE, array(), $wgInterlanguageExtensionDB );
+			$this->foreignDbr = wfGetDB( DB_REPLICA, array(), $wgInterlanguageExtensionDB );
 		}
 
 		list( $dbKey, $namespace ) = $this->getKeyNS( $param );
@@ -338,7 +338,7 @@ THEEND;
 	 * @return	The array. If there are no pages linked, an empty array is returned.
 	 */
 	function loadPageLinks( $articleid ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select( 'page_props', 'pp_value', array( 'pp_page' => $articleid, 'pp_propname' => 'interlanguage_pages' ), __FUNCTION__);
 		$pagelinks = array();
 		$row = $res->fetchObject();
@@ -353,7 +353,7 @@ THEEND;
 	 * Preserve the links that are in the article; this will be called in case of an API error.
 	 */
 	function preservePageLinks( $articleid ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$a = $this->readLinksFromDB( $dbr, $articleid );
 		$res = true;
 		return array( $res, $a );
