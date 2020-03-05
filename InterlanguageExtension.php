@@ -36,7 +36,7 @@ class InterlanguageExtension {
 	 * @param $parser Parser standard Parser object.
 	 * @param $param parameter passed to {{interlanguage:}}.
 	 */
-	function interlanguage( &$parser, $param ) {
+	function interlanguage( Parser $parser, $param ) {
 		$this->addPageLink( $parser->getOutput(), $param );
 		$parser->getOutput()->addModules( 'ext.Interlanguage' );
 
@@ -182,7 +182,7 @@ class InterlanguageExtension {
 	 * @param $parserOutput ParserOutput
 	 * @param $param
 	 */
-	function addPageLink( &$parserOutput, $param ) {
+	function addPageLink( ParserOutput $parserOutput, $param ) {
 		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
 		if(!$ilp) $ilp = array(); else $ilp = @unserialize( $ilp );
 		if(!isset($ilp[$param])) {
@@ -292,8 +292,7 @@ THEEND;
 	 */
 	function onSkinTemplateOutputPageBeforeExec( &$skin, &$template ) {
 		global $wgOut;
-		$pagelinks = isset( $wgOut->interlanguage_pages )? $wgOut->interlanguage_pages: array();
-		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
+		$pagelinktitles = $this->makePageLinkTitles( $wgOut->interlanguage_pages ?? [] );
 
 		foreach( $pagelinktitles as $title ) {
 			$template->data['language_urls'][] = array(

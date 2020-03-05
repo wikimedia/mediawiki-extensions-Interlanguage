@@ -26,10 +26,10 @@
 
 // Based on https://www.mediawiki.org/wiki/Manual:Job_queue/For_developers
 class InterlanguageCentralExtensionPurgeJob extends Job {
-	public function __construct( $title, $params ) {
+	public function __construct( Title $title, array $params ) {
 		parent::__construct( 'purgeDependentWikis', $title, $params );
 	}
- 
+
 	/**
 	 * Execute the job
 	 *
@@ -44,7 +44,7 @@ class InterlanguageCentralExtensionPurgeJob extends Job {
 			if( !$iw ) continue;
 			$apiUrl = $iw->getAPI();
 			if( !$apiUrl ) continue;
-			$apiUrl .= '?' . wfArrayToCGI( array( 
+			$apiUrl .= '?' . wfArrayToCGI( array(
 				'action'	=> 'purge',
 				'format'	=> 'json', //Smallest response
 				'titles'	=> implode( '|', array_keys( $pages ) )
