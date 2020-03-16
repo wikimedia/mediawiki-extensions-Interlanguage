@@ -41,8 +41,8 @@ $wgAutoloadClasses['InterlanguageCentralExtension'] = dirname(__FILE__) . '/Inte
 $wgHooks['ParserFirstCallInit'][] = 'wfInterlanguageCentralExtension';
 
 /**
- * @param $parser Parser
- * @return bool
+ * @param Parser $parser
+ * @return true
  */
 function wfInterlanguageCentralExtension( $parser ) {
 	global $wgHooks, $wgInterlanguageCentralExtension;

@@ -26,15 +26,16 @@
 
 class InterlanguageExtension {
 	/**
-	 * @var \Wikimedia\Rdbms\IDatabase
+	 * @var \Wikimedia\Rdbms\IDatabase|false
 	 */
 	public $foreignDbr = false;
 
 	/**
 	 * The meat of the extension, the function that handles {{interlanguage:}} magic.
 	 *
-	 * @param $parser Parser standard Parser object.
-	 * @param $param parameter passed to {{interlanguage:}}.
+	 * @param Parser $parser
+	 * @param string $param parameter passed to {{interlanguage:}}.
+	 * @return string
 	 */
 	function interlanguage( Parser $parser, $param ) {
 		$this->addPageLink( $parser->getOutput(), $param );
@@ -56,7 +57,8 @@ class InterlanguageExtension {
 	}
 
 	/**
-	 * Get the links
+	 * @param string $param
+	 * @return array[]
 	 */
 	function getLinks( $param ) {
 		global $wgInterlanguageExtensionDB, $wgInterlanguageExtensionApiUrl;
@@ -72,7 +74,9 @@ class InterlanguageExtension {
 
 	/**
 	 * Get the links from a foreign database
-	 * @return Array crafted to look like an API response
+	 *
+	 * @param string $param
+	 * @return array[] crafted to look like an API response
 	 */
 	function getLinksFromDB( $param ) {
 		global $wgInterlanguageExtensionDB;
@@ -120,8 +124,8 @@ class InterlanguageExtension {
 	}
 
 	/**
-	 * Get the links from an API
-	 * @return API response
+	 * @param string $param
+	 * @return array[] API response
 	 */
 	function getLinksFromApi( $param ) {
 		global $wgInterlanguageExtensionApiUrl;
@@ -138,6 +142,10 @@ class InterlanguageExtension {
 
 	/**
 	 * Process the links and prepare the result
+	 *
+	 * @param array[] $a
+	 * @param string $param
+	 * @return array
 	 */
 	function processLinks( $a, $param ) {
 		global $wgInterlanguageExtensionInterwiki;
@@ -179,8 +187,8 @@ class InterlanguageExtension {
 	/**
 	 * Add a page to the list of page links. It will later be used by pageLinks().
 	 *
-	 * @param $parserOutput ParserOutput
-	 * @param $param
+	 * @param ParserOutput $parserOutput
+	 * @param string $param
 	 */
 	function addPageLink( ParserOutput $parserOutput, $param ) {
 		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
@@ -192,10 +200,8 @@ class InterlanguageExtension {
 	}
 
 	/**
-	 * Get the list of page links.
-	 *
-	 * @param $parserOutput ParserOutput
-	 * @return Array of page links. Empty array if there are no links, literal false if links have not
+	 * @param ParserOutput $parserOutput
+	 * @return array|false Array of page links. Empty array if there are no links, literal false if links have not
 	 * been yet set.
 	 */
 	function getPageLinks( $parserOutput ) {
@@ -206,6 +212,10 @@ class InterlanguageExtension {
 
 	/**
 	 * Copies interlanguage pages from ParserOutput to OutputPage.
+	 *
+	 * @param OutputPage $out
+	 * @param ParserOutput $parserOutput
+	 * @return true
 	 */
 	function onOutputPageParserOutput( &$out, $parserOutput ) {
 		$pagelinks = $this->getPageLinks( $parserOutput );
@@ -216,7 +226,8 @@ class InterlanguageExtension {
 	/**
 	 * Displays a list of links to pages on the central wiki below the edit box.
 	 *
-	 * @param	$editPage - standard EditPage object.
+	 * @param EditPage $editPage
+	 * @return true
 	 */
 	function pageLinks( $editPage ) {
 		if( isset( $editPage->mParserOutput ) ) {
@@ -255,7 +266,8 @@ THEEND;
 	/**
 	 * Get Db key form and namespace of an article title.
 	 *
-	 * @param	$param - Page title
+	 * @param string $param Page title
+	 * @return array
 	 */
 	function getKeyNS( $param ) {
 		$paramTitle = Title::newFromText( $param );
@@ -273,7 +285,8 @@ THEEND;
 	/**
 	 * Translate namespace from localized to the canonical form.
 	 *
-	 * @param	$param - Page title
+	 * @param string $param Page title
+	 * @return string
 	 */
 	function translateNamespace( $param ) {
 		list( $dbKey, $namespace ) = $this->getKeyNS( $param );
@@ -288,7 +301,9 @@ THEEND;
 	/**
 	 * Displays a list of links to pages on the central wiki at the end of the language box.
 	 *
-	 * @param	$editPage - standard EditPage object.
+	 * @param SkinTemplate $skin
+	 * @param QuickTemplate $template
+	 * @return true
 	 */
 	function onSkinTemplateOutputPageBeforeExec( &$skin, &$template ) {
 		global $wgOut;
@@ -309,8 +324,8 @@ THEEND;
 	/**
 	 * Make an array of Titles from the array of links.
 	 *
-	* @param	$pagelinks Array of page links.
-	 * @return	Array of Title objects.  If there are no page links, an empty array is returned.
+	 * @param array $pagelinks
+	 * @return Title[] If there are no page links, an empty array is returned.
 	 */
 	function makePageLinkTitles( $pagelinks ) {
 		global $wgInterlanguageExtensionInterwiki;
@@ -333,8 +348,8 @@ THEEND;
 	 * Returns an array of names of pages on the central wiki which are linked to from a page
 	 * on this wiki by {{interlanguage:}} magic. Pagenames are array keys.
 	 *
-	 * @param	$articleid - ID of the article whose links should be returned.
-	 * @return	The array. If there are no pages linked, an empty array is returned.
+	 * @param int $articleid ID of the article whose links should be returned.
+	 * @return array If there are no pages linked, an empty array is returned.
 	 */
 	function loadPageLinks( $articleid ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -350,6 +365,9 @@ THEEND;
 
 	/**
 	 * Preserve the links that are in the article; this will be called in case of an API error.
+	 *
+	 * @param int $articleid
+	 * @return array
 	 */
 	function preservePageLinks( $articleid ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -362,9 +380,9 @@ THEEND;
 	 * Read interlanguage links from a database, and return them in the same format that API
 	 * uses.
 	 *
-	 * @param	$dbr \Wikimedia\Rdbms\IDatabase
-	 * @param	$articleid int ID of the article whose links should be returned.
-	 * @return	The array with the links. If there are no links, an empty array is returned.
+	 * @param \Wikimedia\Rdbms\IDatabase $dbr
+	 * @param int $articleid ID of the article whose links should be returned.
+	 * @return array[] The array with the links. If there are no links, an empty array is returned.
 	 */
 	function readLinksFromDB( $dbr, $articleid ) {
 		$res = $dbr->select(
@@ -382,6 +400,8 @@ THEEND;
 
 	/**
 	 * Sort an array of links in-place
+	 *
+	 * @param array[] $a
 	 */
 	function sortLinks( &$a ) {
 		global $wgInterlanguageExtensionSort;
@@ -400,6 +420,9 @@ THEEND;
 
 	/**
 	 * Convert an array of links to wikitext
+	 *
+	 * @param array[] $a
+	 * @return string
 	 */
 	function linksToWiki( $a ) {
 		global $wgLanguageCode;
@@ -414,6 +437,10 @@ THEEND;
 
 	/**
 	 * Compare two interlanguage links by order of alphabet, based on language code.
+	 *
+	 * @param array $a
+	 * @param array $b
+	 * @return int
 	 */
 	static function compareCode($a, $b) {
 		return strcmp($a['lang'], $b['lang']);
@@ -423,6 +450,10 @@ THEEND;
 	 * Compare two interlanguage links by order of alphabet, based on local language.
 	 *
 	 * List from http://meta.wikimedia.org/w/index.php?title=Interwiki_sorting_order&oldid=2022604#By_order_of_alphabet.2C_based_on_local_language
+	 *
+	 * @param array $a
+	 * @param array $b
+	 * @return int
 	 */
 	static function compareAlphabetic($a, $b) {
 		global $wgInterlanguageExtensionSortPrepend;
@@ -474,6 +505,10 @@ THEEND;
 	 * word).
 	 *
 	 * List from http://meta.wikimedia.org/w/index.php?title=Interwiki_sorting_order&oldid=2022604#By_order_of_alphabet.2C_based_on_local_language_.28by_first_word.29
+	 *
+	 * @param array $a
+	 * @param array $b
+	 * @return int
 	 */
 	static function compareAlphabeticRevised($a, $b) {
 		global $wgInterlanguageExtensionSortPrepend;

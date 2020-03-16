@@ -48,7 +48,7 @@ $wgResourceModules['ext.Interlanguage'] = array(
 );
 
 /**
- * @param $parser Parser
+ * @param Parser $parser
  * @return bool
  */
 function wfInterlanguageExtension( $parser ) {

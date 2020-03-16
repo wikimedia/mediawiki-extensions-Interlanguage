@@ -28,6 +28,12 @@ class InterlanguageCentralExtension {
 	//ILL = InterLanguageLinks
 	public $oldILL = array();
 
+	/**
+	 * @param Parser $parser
+	 * @param string $lang
+	 * @param string $title
+	 * @return string
+	 */
 	function languagelink( $parser, $lang, $title = "" ) {
 		if( strlen( $lang ) && strlen( $title ) ) {
 			return "[[$lang:$title]][[:$lang:$title]]";
@@ -36,6 +42,10 @@ class InterlanguageCentralExtension {
 		}
 	}
 
+	/**
+	 * @param LinksUpdate $linksUpdate
+	 * @return true
+	 */
 	function onLinksUpdate( &$linksUpdate ) {
 		$oldILL = $this->getILL( DB_REPLICA, $linksUpdate->mTitle);
 		$newILL = $linksUpdate->mInterlangs;
@@ -67,6 +77,11 @@ class InterlanguageCentralExtension {
 		return true;
 	}
 
+	/**
+	 * @param int $db
+	 * @param Title $title
+	 * @return array[]
+	 */
 	function getILL( $db, $title ) {
 		$dbr = wfGetDB( $db );
 		$res = $dbr->select( 'langlinks', array( 'll_lang', 'll_title' ), array( 'll_from' => $title->mArticleID), __FUNCTION__);
