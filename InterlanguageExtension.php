@@ -45,7 +45,7 @@ class InterlanguageExtension {
 		list($res, $a) = $this->processLinks( $a, $param );
 
 		if($res === false) {
-			list( $res, $a ) = $this->preservePageLinks( $parser->mTitle->mArticleID );
+			list( $res, $a ) = $this->preservePageLinks( $parser->getTitle()->mArticleID );
 		}
 
 		if ($res === true) {
