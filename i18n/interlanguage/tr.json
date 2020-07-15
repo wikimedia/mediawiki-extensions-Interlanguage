@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"BaRaN6161 TURK",
 			"Emperyan",
 			"Joseph",
 			"Rapsar",
@@ -9,5 +10,5 @@
 	},
 	"interlanguage-desc": "Başka bir vikiden dillerarası bağlantıları alır",
 	"interlanguage-pagelinksexplanation": "Diğer dillere bağlantıları olan sayfalar:",
-	"interlanguage-editlinks": "Bağlantıları düzenle"
+	"interlanguage-editlinks": "Bağlantıları değiştir"
 }
