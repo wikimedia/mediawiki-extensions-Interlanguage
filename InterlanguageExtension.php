@@ -24,6 +24,8 @@
  * @see https://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
+use MediaWiki\MediaWikiServices;
+
 class InterlanguageExtension {
 	/**
 	 * @var \Wikimedia\Rdbms\IDatabase|false
@@ -293,7 +295,9 @@ THEEND;
 		if( $namespace == 0 ) {
 			return $dbKey;
 		} else {
-			$canonicalNamespaces = MWNamespace::getCanonicalNamespaces();
+			$canonicalNamespaces = MediaWikiServices::getInstance()
+				->getNamespaceInfo()
+				->getCanonicalNamespaces();
 			return $canonicalNamespaces[$namespace] . ":" . $dbKey;
 		}
 	}
