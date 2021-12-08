@@ -4,10 +4,11 @@
 			"Armando-Martin",
 			"Crazymadlover",
 			"Fitoschido",
-			"Translationista"
+			"Translationista",
+			"Jakeukalane"
 		]
 	},
-	"interlanguage-desc": "Coge vínculos interidiomáticos de otro wiki",
+	"interlanguage-desc": "Toma vínculos interidiomáticos de otra wiki",
 	"interlanguage-pagelinksexplanation": "Páginas con enlaces interlingüísticos:",
 	"interlanguage-editlinks": "Editar los enlaces"
 }
