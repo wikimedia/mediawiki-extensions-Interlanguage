@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Per",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Sabelöga"
 		]
 	},
-	"interlanguage-desc": "Hämtar språklänkar från andra wikis",
+	"interlanguage-desc": "Hämtar språklänkar från andra wikier",
 	"interlanguage-pagelinksexplanation": "Sidor med språklänkar:",
 	"interlanguage-editlinks": "Redigera länkar"
 }

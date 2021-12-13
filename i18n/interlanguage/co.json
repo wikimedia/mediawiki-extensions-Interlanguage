@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Paulu"
+			"Paulu",
+			"Jun Misugi"
 		]
 	},
+	"interlanguage-pagelinksexplanation": "Pàgine cù ligami interlingua:",
 	"interlanguage-editlinks": "Mudificà ligame"
 }
