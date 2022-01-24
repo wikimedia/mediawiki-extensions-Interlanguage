@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * MediaWiki InterlanguageCentral extension
  * InterlanguageCentralExtension class
@@ -71,7 +74,12 @@ class InterlanguageCentralExtension {
 		) {
 			$ill = array_merge_recursive($oldILL, $newILL);
 			$job = new InterlanguageCentralExtensionPurgeJob( $linksUpdate->mTitle, array('ill' => $ill) );
-			JobQueueGroup::singleton()->push( $job );
+			if ( method_exists( MediaWikiServices::class, 'getJobQueueGroup' ) ) {
+				// MW 1.37+
+				MediaWikiServices::getInstance()->getJobQueueGroup()->push( $job );
+			} else {
+				JobQueueGroup::singleton()->push( $job );
+			}
 		}
 
 		return true;
