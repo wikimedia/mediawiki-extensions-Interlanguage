@@ -41,7 +41,7 @@ class InterlanguageExtension {
 	 */
 	function interlanguage( Parser $parser, $param ) {
 		$this->addPageLink( $parser->getOutput(), $param );
-		$parser->getOutput()->addModules( 'ext.Interlanguage' );
+		$parser->getOutput()->addModules( [ 'ext.Interlanguage' ] );
 
 		$a = $this->getLinks( $param );
 		list($res, $a) = $this->processLinks( $a, $param );
@@ -193,11 +193,21 @@ class InterlanguageExtension {
 	 * @param string $param
 	 */
 	function addPageLink( ParserOutput $parserOutput, $param ) {
-		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
+			// MW 1.38
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
+		} else {
+			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		}
 		if(!$ilp) $ilp = array(); else $ilp = @unserialize( $ilp );
 		if(!isset($ilp[$param])) {
 			$ilp[$param] = true;
-			$parserOutput->setProperty( 'interlanguage_pages', @serialize( $ilp ) );
+			if ( method_exists( $parserOutput, 'setPageProperty' ) ) {
+				// MW 1.38
+				$parserOutput->setPageProperty( 'interlanguage_pages', @serialize( $ilp ) );
+			} else {
+				$parserOutput->setProperty( 'interlanguage_pages', @serialize( $ilp ) );
+			}
 		}
 	}
 
@@ -207,7 +217,12 @@ class InterlanguageExtension {
 	 * been yet set.
 	 */
 	function getPageLinks( $parserOutput ) {
-		$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
+			// MW 1.38
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
+		} else {
+			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+		}
 		if($ilp !== false) $ilp = @unserialize( $ilp );
 		return $ilp;
 	}
