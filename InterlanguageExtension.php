@@ -195,7 +195,8 @@ class InterlanguageExtension {
 	function addPageLink( ParserOutput $parserOutput, $param ) {
 		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
 			// MW 1.38
-			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
+			// T301915
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' ) ?? false;
 		} else {
 			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
 		}
@@ -219,7 +220,8 @@ class InterlanguageExtension {
 	function getPageLinks( $parserOutput ) {
 		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
 			// MW 1.38
-			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
+			// T301915
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' ) ?? false;
 		} else {
 			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
 		}
