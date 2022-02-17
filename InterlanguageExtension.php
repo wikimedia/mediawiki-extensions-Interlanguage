@@ -194,11 +194,12 @@ class InterlanguageExtension {
 	 */
 	function addPageLink( ParserOutput $parserOutput, $param ) {
 		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
-			// MW 1.38
-			// T301915
-			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' ) ?? false;
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
 		} else {
 			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+			if ($ilp === false) {
+				$ilp = null;
+			}
 		}
 		if(!$ilp) $ilp = array(); else $ilp = @unserialize( $ilp );
 		if(!isset($ilp[$param])) {
@@ -220,12 +221,14 @@ class InterlanguageExtension {
 	function getPageLinks( $parserOutput ) {
 		if ( method_exists( $parserOutput, 'getPageProperty' ) ) {
 			// MW 1.38
-			// T301915
-			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' ) ?? false;
+			$ilp = $parserOutput->getPageProperty( 'interlanguage_pages' );
 		} else {
 			$ilp = $parserOutput->getProperty( 'interlanguage_pages' );
+			if ($ilp === false) {
+				$ilp = null;
+			}
 		}
-		if($ilp !== false) $ilp = @unserialize( $ilp );
+		if($ilp !== null) $ilp = @unserialize( $ilp );
 		return $ilp;
 	}
 
