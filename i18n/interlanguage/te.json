@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kiranmayee"
+			"Kiranmayee",
+			"Chaduvari"
 		]
 	},
-	"interlanguage-desc": "అంతర భాషా లింకులను వేరొక వికీ నుంచి సంపాదిస్తుంది"
+	"interlanguage-desc": "అంతర భాషా లింకులను వేరొక వికీ నుంచి సంపాదిస్తుంది",
+	"interlanguage-pagelinksexplanation": "భాషా లింకులు ఉన్న పేజీలు:"
 }
