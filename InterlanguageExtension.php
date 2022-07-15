@@ -160,12 +160,9 @@ class InterlanguageExtension {
 				// There is no such article on the central wiki, so we will display a broken link
 				// to the article on the central wiki
 				$res = array(
-					Linker::link(
+					MediaWikiServices::getInstance()->getLinkRenderer()->makeBrokenLink(
 						Title::newFromText( $wgInterlanguageExtensionInterwiki . $this->translateNamespace( $param ) ),
-						$wgInterlanguageExtensionInterwiki . $param,
-						array(),
-						array(),
-						array( 'broken' )
+						$wgInterlanguageExtensionInterwiki . $param
 					),
 					'noparse' => true,
 					'isHTML' => true
@@ -270,8 +267,11 @@ class InterlanguageExtension {
 <div class="mw-interlanguageExtensionEditLinksExplanation"><p>$ple</p></div>
 <ul>
 THEEND;
+
+			$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+
 			foreach($pagelinktitles as $title) {
-				$link = Linker::link( $title,$title->getText(), array(), array( 'action' => 'edit' ) );
+				$link = $linkRenderer->makeLink( $title, $title->getText(), array(), array( 'action' => 'edit' ) );
 				$res .= "<li>$link</li>\n";
 			}
 			$res .= <<<THEEND
