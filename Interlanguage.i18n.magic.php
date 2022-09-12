@@ -125,7 +125,7 @@ $magicWords['ru'] = array(
 	'interlanguage' => array( 0, 'межязык' ),
 );
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)) */
 $magicWords['sr-el'] = array(
 	'interlanguage' => array( 0, 'unutrašnji_jezik' ),
 );
@@ -150,12 +150,12 @@ $magicWords['vi'] = array(
 	'interlanguage' => array( 0, 'liên_ngôn_ngữ', 'liênngônngữ' ),
 );
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Simplified Chinese (中文（简体）) */
 $magicWords['zh-hans'] = array(
 	'interlanguage' => array( 0, '跨语言' ),
 );
 
-/** Traditional Chinese (中文（繁體）‎) */
+/** Traditional Chinese (中文（繁體）) */
 $magicWords['zh-hant'] = array(
 	'interlanguage' => array( 0, '跨語言' ),
 );
