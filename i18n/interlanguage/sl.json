@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"interlanguage-desc": "Zagrabi medjezikovne povezave z drugega wikija",
+	"interlanguage-desc": "Zagrabi medjezikovne povezave iz drugega vikija",
 	"interlanguage-pagelinksexplanation": "Strani z medjezikovnimi povezavami:",
 	"interlanguage-editlinks": "Uredi povezave"
 }
