@@ -137,7 +137,7 @@ class InterlanguageExtension {
 			"?action=query&prop=langlinks&" .
 			"lllimit=500&format=php&redirects&titles=" .
 			urlencode( $title );
-		$a = Http::get( $url );
+		$a = MediaWikiServices::getInstance()->getHttpRequestFactory()->get( $url );
 		$a = @unserialize( $a );
 		return $a;
 	}

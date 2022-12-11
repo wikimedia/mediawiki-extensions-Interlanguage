@@ -24,6 +24,8 @@
  * @see https://www.mediawiki.org/wiki/Extension:Interlanguage
  */
 
+use MediaWiki\MediaWikiServices;
+
 // Based on https://www.mediawiki.org/wiki/Manual:Job_queue/For_developers
 class InterlanguageCentralExtensionPurgeJob extends Job {
 	public function __construct( Title $title, array $params ) {
@@ -39,6 +41,7 @@ class InterlanguageCentralExtensionPurgeJob extends Job {
 		//sleep() could be added here to reduce unnecessary use
 		$ill = $this->params['ill'];
 
+		$httpRequestFactory = MediaWikiServices::getInstance()->getHttpRequestFactory();
 		foreach($ill as $lang => $pages) {
 			$iw = Interwiki::fetch( $lang );
 			if( !$iw ) continue;
@@ -49,7 +52,7 @@ class InterlanguageCentralExtensionPurgeJob extends Job {
 				'format'	=> 'json', //Smallest response
 				'titles'	=> implode( '|', array_keys( $pages ) )
 			) );
-			Http::post( $apiUrl );
+			$httpRequestFactory->post( $apiUrl );
 			//TODO: error handling
 		}
 
