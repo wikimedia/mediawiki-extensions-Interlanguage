@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lloffiwr"
+			"Lloffiwr",
+			"Afalau"
 		]
 	},
 	"interlanguage-desc": "Yn nôl cysylltau rhyngieithol o wici arall",
 	"interlanguage-pagelinksexplanation": "Tudalennau gyda chysylltau rhyngieithol arnynt:",
-	"interlanguage-editlinks": "Golygu'r cysylltau"
+	"interlanguage-editlinks": "Golygu dolenni"
 }
