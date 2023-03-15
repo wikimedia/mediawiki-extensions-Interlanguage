@@ -255,7 +255,7 @@ class InterlanguageExtension {
 		} else {
 			// If there is no ParserOutput, it means the article was not parsed, and we should
 			// load links from the DB.
-			$pagelinks = $this->loadPageLinks( $editPage->mArticle->getTitle()->mArticleID );
+			$pagelinks = $this->loadPageLinks( $editPage->getArticle()->getTitle()->mArticleID );
 		}
 		$pagelinktitles = $this->makePageLinkTitles( $pagelinks );
 
