@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Karthi.dr",
-			"Shanmugamp7"
+			"Shanmugamp7",
+			"Fahimrazick"
 		]
 	},
-	"interlanguage-pagelinksexplanation": "பிற மொழி இணைப்புள்ள பக்கங்கள்:",
-	"interlanguage-editlinks": "இணைப்புக்களைத் தொகு"
+	"interlanguage-pagelinksexplanation": "மொழியிடைத் தொடுப்புகளுள்ள பக்கங்கள்:",
+	"interlanguage-editlinks": "தொடுப்புகளைத் தொகு"
 }
